@@ -1,0 +1,30 @@
+:root{
+    --background-color: #ecf0f1;
+    --text-color: #2c3e50;
+    --accent-color: #3498db;
+    --font-family: 'Arial', sans-serif;
+}
+
+/* used for the moon or sun icon */
+#dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    padding: 0;
+    transition: color 0.3s;
+}
+
+.body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 20px;
+}
+
+.body.dark-mode {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
