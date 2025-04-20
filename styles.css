@@ -4,6 +4,7 @@
     --accent-color: #ef6c00;
     --font-family: 'Arial', sans-serif;
     --icon-color: #000;
+    --icon-filter: none;
 }
 
 /* used for the moon or sun icon */
@@ -33,6 +34,7 @@ body.dark-mode {
     --accent-color: #ef6c00;
     --font-family: 'Arial', sans-serif;
     --icon-color: #fff;
+    --icon-filter: brightness(0) invert(1);
 }
 
 header {
@@ -117,15 +119,15 @@ a:active {
 .about-image {         /* photo + icons bundle */
     flex: 0 0 auto;  
     display: flex;
-    flex-direction: column; /* stack the image and icons */
-    align-items: flex-start; /* left-align the image and icons */
+    flex-direction: row; /* row layout: icons will sit to the right of the image */
+    align-items: flex-start; /* top-align the image and icons */
     gap: 1rem;         /* space between the image and icons */
     margin: 0;        /* no margin */
 }
 
 .about-image img {
     width: auto;
-    height: 200px; /* fixed height */
+    height: 300px; /* fixed height */
     border-radius: 6px;
     object-fit: cover;
     border: 1px solid var(--border);
@@ -135,14 +137,13 @@ a:active {
     margin-top: 0.75rem;
     margin-left: 2rem; /* space between the image and the icons */
     display: flex;
-    justify-content: flex-start;
     gap: 1rem;
     flex-direction: column; /* stack the icons in column */
 }
 
 .about-image .icons img {    /* social icons */
-    fill: var(--icon-color);
-    transition: fill 0.2s ease;
+    filter: var(--icon-filter);
+    transition: filter 0.2s ease;
     width: 24px;
     height: 24px;
 }
@@ -150,5 +151,5 @@ a:active {
 .about-image .icons img:hover,
 .about-image .icons img:focus,
 .about-image .icons img:active { 
-    fill: var(--accent-color); 
+    filter: var(--icon-filter) drop-shadow(0 0 5px var(--accent-color));
 }
