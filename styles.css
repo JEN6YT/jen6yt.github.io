@@ -105,7 +105,7 @@ a:active {
 
 #about {
     display: grid;
-    grid-template-columns: 2fr auto; /* two columns: 2fr for text, 1fr for image */
+    grid-template-columns: 2fr 1fr; /* two columns: 2fr for text, 1fr for image */
     align-items: start;  /* top‑align the two columns */
     gap: 2rem;          /* space between the two columns */
     padding: 4rem 4rem 1rem; /* top 4rem | left+right 4rem | bottom 1rem */
