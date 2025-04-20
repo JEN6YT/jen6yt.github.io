@@ -114,13 +114,15 @@ a:active {
 
 .about-image {         /* photo + icons bundle */
     float: right;        /* hard‑right alignment */
-    width: 260px;        /* or whatever width you like for the picture */
-    margin: 4rem 4rem 1rem 1rem;  /* space: top 0  right 0  bottom 1rem  left 2rem */
-    text-align: center;  /* center the icons under the photo */
+    margin: 0.5rem 4rem 1rem 1rem;  /* space: top 0  right 0  bottom 1rem  left 2rem */
+    gap: 0.5rem;    /* space between the image and the icons */
+    display: flex;
+    align-items: flex-start;
+    ;
 }
 
 .about-image img {
-    width: 100%;
+    width: 50%;
     height: auto;
     border-radius: 6px;
     object-fit: cover;
@@ -128,10 +130,11 @@ a:active {
 }
 
 .about-image .icons {          /* social row */
-    margin-top: 1rem;
+    margin-top: 0.75rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 1rem;
+    flex-direction: column; /* stack the icons in column */
 }
 
 .about-image .icons img {    /* social icons */
