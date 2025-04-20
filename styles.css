@@ -64,7 +64,7 @@ a:active {
 
 .logo a { 
     font-weight: 700; 
-    font-size: 1.15rem; 
+    font-size: 2rem; 
     color: var(--text-color); 
     text-decoration: none;
 }
@@ -99,17 +99,42 @@ a:active {
     display: none !important;         /* wipe out the bar */
 }
 
-.about-text.p {
-    margin-bottom: 1rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
-}
-.about-text.h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    padding-left: 5rem;
+#about {               /* turn off the old grid for this section only */
+    display: block;
+    overflow: hidden;    /* creates a new BFC so the float stays contained */
 }
 
-.about-text.name {
-    font-weight: 700;
+.about-text p {
+    margin: 0 4rem 1rem;   /* top 0 | left+right 4rem | bottom 1rem */
+    max-width: 70ch;       /* ~70 characters for comfy reading */
+}
+
+.about-image {         /* photo + icons bundle */
+    float: right;        /* hard‑right alignment */
+    width: 260px;        /* or whatever width you like for the picture */
+    margin: 0 4rem 1rem 2rem;  /* space: top 0  right 0  bottom 1rem  left 2rem */
+    text-align: center;  /* center the icons under the photo */
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+}
+
+.about-image .icons {          /* social row */
+    margin-top: 0.75rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* ----- mobile: drop the float so content stacks nicely ----- */
+@media (max-width: 720px) {
+    .about-image {
+        float: none;
+        width: 70%;
+        margin: 2rem auto 1rem;   /* center the sidebar below text */
+    }
 }
