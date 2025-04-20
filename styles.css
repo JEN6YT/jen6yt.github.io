@@ -104,15 +104,15 @@ a:active {
     overflow: hidden;    /* creates a new BFC so the float stays contained */
 }
 
-.about-text p {
-    margin: 1rem 4rem 1rem;   /* top 1rem | left+right 4rem | bottom 1rem */
+.about-text {
+    margin: 4rem 4rem 1rem;   /* top 1rem | left+right 4rem | bottom 1rem */
     max-width: 70ch;       /* ~70 characters for comfy reading */
 }
 
 .about-image {         /* photo + icons bundle */
     float: right;        /* hard‑right alignment */
     width: 260px;        /* or whatever width you like for the picture */
-    margin: 0 4rem 1rem 1rem;  /* space: top 0  right 0  bottom 1rem  left 2rem */
+    margin: 4rem 4rem 1rem 1rem;  /* space: top 0  right 0  bottom 1rem  left 2rem */
     text-align: center;  /* center the icons under the photo */
 }
 
@@ -129,13 +129,4 @@ a:active {
     display: flex;
     justify-content: center;
     gap: 1rem;
-}
-
-/* ----- mobile: drop the float so content stacks nicely ----- */
-@media (max-width: 720px) {
-    .about-image {
-        float: none;
-        width: 70%;
-        margin: 2rem auto 1rem;   /* center the sidebar below text */
-    }
 }
