@@ -108,6 +108,7 @@ a:active {
     align-items: flex-start;  /* top‑align the two columns */
     gap: 2rem;          /* space between the two columns */
     padding: 4rem 4rem 1rem; /* top 4rem | left+right 4rem | bottom 1rem */
+    flex-direction: row; /* row layout */
 }
 
 .about-text {
@@ -152,4 +153,13 @@ a:active {
 .about-image .icons img:focus,
 .about-image .icons img:active { 
     filter: var(--icon-filter) drop-shadow(0 0 5px var(--accent-color));
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
