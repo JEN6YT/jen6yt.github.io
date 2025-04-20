@@ -112,13 +112,11 @@ a:active {
 }
 
 .about-text {
-    flex: 1;          /* take up the remaining space */
     margin: 0;        /* no margin */
     max-width: 70ch;       /* ~70 characters for comfy reading */
 }
 
 .about-image {         /* photo + icons bundle */
-    flex: 0 0 auto;  
     display: flex;
     flex-direction: row; /* row layout: icons will sit to the right of the image */
     align-items: flex-start; /* top-align the image and icons */
