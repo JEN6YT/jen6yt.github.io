@@ -102,6 +102,7 @@ a:active {
 #about {               /* turn off the old grid for this section only */
     display: block;
     overflow: hidden;    /* creates a new BFC so the float stays contained */
+    padding-right: 6rem; /* space for the image */
 }
 
 .about-text {
