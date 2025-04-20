@@ -128,14 +128,17 @@ a:active {
 }
 
 .about-image .icons {          /* social row */
-    width: 24px;
-    height: 24px;
     margin-top: 1rem;
     display: flex;
     justify-content: center;
     gap: 1rem;
+}
+
+.about-image .icons img {    /* social icons */
     fill: var(--icon-color);
     transition: fill 0.2s ease;
+    width: 24px;
+    height: 24px;
 }
 
 .about-image .icons:hover,
