@@ -127,6 +127,7 @@ a:active {
 .about-image img {
     width: auto;
     height: 300px; /* fixed height */
+    max-width: 100%; /* responsive */
     border-radius: 6px;
     object-fit: cover;
     border: 1px solid var(--border);
