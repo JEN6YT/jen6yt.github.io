@@ -40,6 +40,18 @@ header {
     z-index: 10;
 }
 
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+a:hover,
+a:focus,
+a:active { 
+    color: var(--accent-color); 
+    text-decoration: underline;
+}
+
 .nav {
     max-width: 2000px; 
     margin: 0 auto; 
@@ -53,6 +65,7 @@ header {
     font-weight: 700; 
     font-size: 1.15rem; 
     color: var(--text-color); 
+    text-decoration: none;
 }
 
 .logo a:hover,
@@ -71,12 +84,18 @@ header {
     position: relative; 
     font-weight: 600; 
     color: var(--text-color);
+    text-decoration: none;
 }
 
 .nav-links a:hover,
 .nav-links a:focus,
 .nav-links a:active { 
     color: var(--accent-color); 
+}
+
+.logo a::after,
+.nav-links a::after{
+    display: none !important;         /* wipe out the bar */
 }
 
 .about-text.h1 {
