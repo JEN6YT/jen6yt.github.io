@@ -61,22 +61,6 @@ header {
     color: var(--accent-color); 
 }
 
-.logo a::after {
-    content: ""; 
-    position: absolute; 
-    left: 0; 
-    bottom: -0.2rem;
-    width: 100%; 
-    height: 2px; 
-    background: var(--accent-color);
-    transform: scaleX(0); 
-    transform-origin: left; 
-    transition: transform .25s;
-}
-.logo a:hover::after, .logo a:focus::after, .logo a:active::after { 
-    transform: scaleX(1); 
-}
-
 .nav-links {
     display: flex;
     gap: 1.5rem;
