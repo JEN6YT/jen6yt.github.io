@@ -111,11 +111,11 @@ a:active {
 }
 
 #about {
-    overflow: auto;
+    padding: 3rem 4rem 1rem; /* no margin */
 }
 
 .about-text {
-    margin: 3rem 3rem 1rem 3rem;        /* no margin */
+    margin: 0;        /* no margin */
     max-width: 70ch;       /* ~70 characters for comfy reading */
 }
 
@@ -125,7 +125,10 @@ a:active {
     flex-direction: row; /* row layout: icons will sit to the right of the image */
     align-items: flex-start; /* top-align the image and icons */
     gap: 1rem;         /* space between the image and icons */
-    margin: -6rem 10rem 1rem 0; /* negative margin to pull the image up */
+
+    position: relative;
+    top: -6rem;
+    right: 10rem;
 }
 
 .about-image img {
@@ -166,6 +169,20 @@ a:active {
 #experience h2 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+}
+
+.experience-entry {
+    display: flex;
+    flex-direction: row; /* row layout */
+    align-items: center; /* top-align the image and text */
+    gap: 3rem; /* space between the image and text */
+    margin-bottom: 2rem; /* space between entries */
+}
+
+.experience-entry img {
+    width: auto;
+    height: fit-content;
+    transition: filter 0.2s ease;
 }
 
 footer {
