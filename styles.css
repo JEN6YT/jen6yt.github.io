@@ -190,12 +190,12 @@ a:active {
 }
 
 .experience-entry img {
-    width: 300px;
+    width: 200px;
     height: auto;
     transition: filter 0.2s ease;
 }
 
-.experience-entry p {
+.experience-text {
     flex: 1 1 auto; /* take up remaining space */
     min-width: 0; /* prevent overflow */
 }
