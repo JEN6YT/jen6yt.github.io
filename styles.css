@@ -111,24 +111,24 @@ a:active {
 }
 
 #about {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* two columns */
+    gap: 2rem; /* space between columns */
+    align-items: start;
     padding: 3rem 4rem 6rem 1rem;
 }
 
 .about-text {
-    margin-left: 5rem;        /* no margin */
+    margin-left: 2rem;        /* no margin */
     max-width: 70ch;       /* ~70 characters for comfy reading */
 }
 
 .about-image {         /* photo + icons bundle */
-    float: right;       /* float the image to the right */
     display: flex;
     flex-direction: row; /* row layout: icons will sit to the right of the image */
     align-items: flex-start; /* top-align the image and icons */
     gap: 1rem;         /* space between the image and icons */
-
-    position: relative;
-    top: 0; /* move the image up */
-    right: 10rem;
+    position: static;
 }
 
 .about-image img {
