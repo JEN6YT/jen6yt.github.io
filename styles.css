@@ -127,7 +127,7 @@ a:active {
     gap: 1rem;         /* space between the image and icons */
 
     position: relative;
-    top: -10rem; /* move the image up */
+    top: 0; /* move the image up */
     right: 10rem;
 }
 
