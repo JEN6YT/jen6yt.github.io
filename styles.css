@@ -197,7 +197,7 @@ a:active {
 
 .experience-entry p {
     flex: 1 1 auto; /* take up remaining space */
-    max-width: 70ch; /* ~70 characters for comfy reading */
+    min-width: 0; /* prevent overflow */
 }
 
 footer {
