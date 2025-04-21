@@ -111,15 +111,14 @@ a:active {
 }
 
 #about {
-    display: grid;
-    grid-template-columns: 2fr 1fr; /* two columns */
+    display: flex;
     gap: 2rem; /* space between columns */
-    align-items: start;
+    align-items: flex-start;
     padding: 3rem 4rem 6rem 1rem;
 }
 
 .about-text {
-    margin-left: 2rem;        /* no margin */
+    margin-left: 4rem;        /* no margin */
     max-width: 70ch;       /* ~70 characters for comfy reading */
 }
 
@@ -162,6 +161,7 @@ a:active {
 }
 
 #experience {
+    clear: both; /* clear floats */
     margin-top: 4rem; 
     padding: 3rem 5rem 1rem;
     max-width: 70ch; /* ~70 characters for comfy reading */
