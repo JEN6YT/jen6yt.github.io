@@ -112,7 +112,6 @@ a:active {
 
 #about {
     overflow: auto;
-    padding: 3rem 4rem 1rem; /* top 3rem | left+right 4rem | bottom 1rem */
 }
 
 .about-text {
