@@ -114,14 +114,14 @@ a:active {
     display: flex;
     flex-direction: column; /* column layout */
     gap: 2rem; /* space between columns */
-    padding: 3rem 4rem 6rem 1rem;
+    padding: 3rem 5rem 1rem;
 }
 
 #about .about-header {
     display: flex;
     flex-direction: row; /* row layout */
     align-items: center; /* top-align the image and text */
-    gap: 2rem; /* space between the image and text */
+    gap: 4rem; /* space between the image and text */
 }
 
 .about-text {
@@ -171,8 +171,8 @@ a:active {
 
 #experience {
     clear: both; /* clear floats */
-    margin-top: 4rem; 
-    padding: 3rem 5rem 1rem;
+    margin-top: 2rem; 
+    padding: 1rem 5rem 1rem;
     max-width: 70ch; /* ~70 characters for comfy reading */
 }
 
@@ -185,14 +185,19 @@ a:active {
     display: flex;
     flex-direction: row; /* row layout */
     align-items: center; /* top-align the image and text */
-    gap: 3rem; /* space between the image and text */
+    gap: 6rem; /* space between the image and text */
     margin-bottom: 2rem; /* space between entries */
 }
 
 .experience-entry img {
-    width: auto;
-    height: fit-content;
+    width: 300px;
+    height: auto;
     transition: filter 0.2s ease;
+}
+
+.experience-entry p {
+    flex: 1 1 auto; /* take up remaining space */
+    max-width: 70ch; /* ~70 characters for comfy reading */
 }
 
 footer {
