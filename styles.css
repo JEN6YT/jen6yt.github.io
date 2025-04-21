@@ -115,7 +115,7 @@ a:active {
 }
 
 .about-text {
-    margin: 0;        /* no margin */
+    margin-left: 5rem;        /* no margin */
     max-width: 70ch;       /* ~70 characters for comfy reading */
 }
 
@@ -127,7 +127,7 @@ a:active {
     gap: 1rem;         /* space between the image and icons */
 
     position: relative;
-    top: -6rem;
+    top: -20rem;
     right: 10rem;
 }
 
@@ -162,7 +162,8 @@ a:active {
 }
 
 #experience {
-    margin: 1rem 3rem 1rem 3rem; /* no margin */
+    margin-top: 4rem; 
+    padding: 3rem 5rem 1rem;
     max-width: 70ch; /* ~70 characters for comfy reading */
 }
 
