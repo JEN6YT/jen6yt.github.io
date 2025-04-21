@@ -115,7 +115,7 @@ a:active {
 }
 
 .about-text {
-    margin: 0 3rem 1rem 0;        /* no margin */
+    margin: 3rem 3rem 1rem 3rem;        /* no margin */
     max-width: 70ch;       /* ~70 characters for comfy reading */
 }
 
@@ -125,7 +125,7 @@ a:active {
     flex-direction: row; /* row layout: icons will sit to the right of the image */
     align-items: flex-start; /* top-align the image and icons */
     gap: 1rem;         /* space between the image and icons */
-    margin: -3rem 3rem 0 0; /* negative margin to pull the image up */
+    margin: -6rem 10rem 1rem 0; /* negative margin to pull the image up */
 }
 
 .about-image img {
@@ -159,11 +159,11 @@ a:active {
 }
 
 #experience {
-    margin: 0 3rem 1rem 0; /* no margin */
+    margin: 1rem 3rem 1rem 3rem; /* no margin */
     max-width: 70ch; /* ~70 characters for comfy reading */
 }
 
-.experience h2 {
+#experience h2 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
