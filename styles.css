@@ -39,9 +39,16 @@ body.dark-mode {
 
 header {
     position: sticky; /* sticky header */
-    top: 0; 
-    border-bottom: 1px solid var(--border); 
-    z-index: 10;
+    top: 0;
+    z-index: 1000; /* above all other content */
+    height: 4rem; /* height of the header */
+    /* Semi‑transparent background + blur */
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* safari */
+    /* Decoration */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: background 0.3s, box-shadow 0.3s;
 }
 
 a {
@@ -104,19 +111,17 @@ a:active {
 }
 
 #about {
-    display: grid;
-    grid-template-columns: 2fr 1fr; /* two columns: 2fr for text, 1fr for image */
-    align-items: start;  /* top‑align the two columns */
-    gap: 2rem;          /* space between the two columns */
+    overflow: auto;
     padding: 3rem 4rem 1rem; /* top 3rem | left+right 4rem | bottom 1rem */
 }
 
 .about-text {
-    margin: 0;        /* no margin */
+    margin: 0 3rem 1rem 0;        /* no margin */
     max-width: 70ch;       /* ~70 characters for comfy reading */
 }
 
 .about-image {         /* photo + icons bundle */
+    float: right;       /* float the image to the right */
     display: flex;
     flex-direction: row; /* row layout: icons will sit to the right of the image */
     align-items: flex-start; /* top-align the image and icons */
