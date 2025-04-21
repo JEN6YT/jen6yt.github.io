@@ -112,9 +112,16 @@ a:active {
 
 #about {
     display: flex;
+    flex-direction: column; /* column layout */
     gap: 2rem; /* space between columns */
-    align-items: flex-start;
     padding: 3rem 4rem 6rem 1rem;
+}
+
+#about .about-header {
+    display: flex;
+    flex-direction: row; /* row layout */
+    align-items: center; /* top-align the image and text */
+    gap: 2rem; /* space between the image and text */
 }
 
 .about-text {
