@@ -111,7 +111,7 @@ a:active {
 }
 
 #about {
-    padding: 3rem 4rem 1rem; /* no margin */
+    padding: 3rem 4rem 6rem 1rem;
 }
 
 .about-text {
@@ -127,7 +127,7 @@ a:active {
     gap: 1rem;         /* space between the image and icons */
 
     position: relative;
-    top: -20rem;
+    top: -200rem;
     right: 10rem;
 }
 
