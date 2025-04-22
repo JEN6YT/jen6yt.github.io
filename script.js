@@ -71,58 +71,56 @@ toggle.addEventListener('click', function() {
     }
 });
 
-// Grab sidebar links and CV sections
-const cvNavLinks = document.querySelectorAll('#cv .sidebar a');
-const cvSections = document.querySelectorAll('#cv .cv-content section[id]');
 
-// Highlight on scroll
-function highlightCvLink() {
-    const marker = window.scrollY + window.innerHeight * 0.3;
-    cvSections.forEach(sec => {
-        const top    = sec.offsetTop;
-        const bottom = top + sec.offsetHeight;
-        const id     = sec.id;
+document.addEventListener('DOMContentLoaded', () => {
+    // 1) Grab sidebar links and CV sections
+    const cvNavLinks = document.querySelectorAll('#cv .sidebar a[href^="#"]');
+    const cvSections = document.querySelectorAll('#cv .cv-content section[id]');
+  
+    // 2) Scroll-spy: highlight on scroll (and on initial load)
+    function highlightCvLink() {
+      const marker = window.scrollY + window.innerHeight * 0.3;
+      cvSections.forEach(sec => {
+        const top     = sec.offsetTop;
+        const bottom  = top + sec.offsetHeight;
         const isActive = marker >= top && marker < bottom;
-
+        const id      = sec.id;
+  
         cvNavLinks.forEach(link => {
-        link.classList.toggle(
+          link.classList.toggle(
             'active',
-            link.getAttribute('href') === `#${id}` && isActive
-        );
+            isActive && link.getAttribute('href') === `#${id}`
+          );
         });
-    });
-}
-
-// Highlight immediately on click
-cvNavLinks.forEach(link => {
-    link.addEventListener('click', () => {
+      });
+    }
+  
+    window.addEventListener('scroll', highlightCvLink);
+    window.addEventListener('load',   highlightCvLink);
+  
+    // 3) Single click-handler: prevent default, scroll, update hash, highlight
+    cvNavLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+  
+        const targetId = link.getAttribute('href').slice(1);
+        const targetEl = document.getElementById(targetId);
+        if (!targetEl) {
+          console.warn(`No element with id="${targetId}"`);
+          return;
+        }
+  
+        // Smoothly scroll so that scroll-margin-top applies
+        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  
+        // Update URL without jumping again
+        history.replaceState(null, '', `#${targetId}`);
+  
+        // Highlight immediately
         cvNavLinks.forEach(l => l.classList.remove('active'));
         link.classList.add('active');
+      });
     });
-});
-
-window.addEventListener('scroll', highlightCvLink);
-window.addEventListener('load', highlightCvLink);
-
-// grab only sidebar links that point at hashes
-
-cvNavLinks.forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();  // stop the browser from doing a full navigation
-
-    const targetId = link.getAttribute('href').slice(1);    // "basics", "work", etc
-    const targetEl = document.getElementById(targetId);
-    if (!targetEl) return;
-
-    // scroll so that the top of the section sits nicely below any sticky header
-    targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-    // optionally update the URL hash without causing another jump
-    history.replaceState(null, '', `#${targetId}`);
-
-    // immediately highlight the clicked link
-    internalLinks.forEach(l => l.classList.remove('active'));
-    link.classList.add('active');
   });
-});
-
+  
+  
