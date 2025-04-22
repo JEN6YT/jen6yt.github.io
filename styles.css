@@ -43,7 +43,7 @@ header {
     position: sticky; /* sticky header */
     top: 0;
     z-index: 1000; /* above all other content */
-    height: 4rem; /* height of the header */
+    height: 3rem; /* height of the header */
     /* Semi‑transparent background + blur */
     background: rgba(255,255,255,0.6);
     backdrop-filter: blur(10px);
@@ -256,7 +256,7 @@ a:active {
     padding: 1.5rem;
     margin-bottom: 2rem;
     /* ensure anchor click brings it into view below your header */
-    scroll-margin-top: 5rem; 
+    scroll-margin-top: 4rem; 
 }
 #cv .card h2 {
     margin-bottom: 1rem;
