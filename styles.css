@@ -5,6 +5,7 @@
     --font-family: 'Arial', sans-serif;
     --icon-color: #000;
     --icon-filter: none;
+    --border-color: #ccc;
 }
 
 /* used for the moon or sun icon */
@@ -35,6 +36,7 @@ body.dark-mode {
     --font-family: 'Arial', sans-serif;
     --icon-color: #fff;
     --icon-filter: brightness(0) invert(1);
+    --border-color: #444;
 }
 
 header {
@@ -74,7 +76,7 @@ a:active {
 }
 
 .logo a { 
-    font-weight: 700; 
+    font-weight: 500; 
     font-size: 2rem; 
     color: var(--text-color); 
     text-decoration: none;
@@ -141,7 +143,7 @@ a:active {
 
 .about-image img {
     width: auto;
-    height: 300px; /* fixed height */
+    height: 500px; /* fixed height */
     max-width: 100%; /* responsive */
     border-radius: 6px;
     object-fit: cover;
@@ -203,6 +205,100 @@ a:active {
 
 .skills {
     color : var(--accent-color);
+}
+
+/* ==== CV Section ==== */
+#cv .cv-wrapper {
+    display: flex;
+    margin-top: 2rem;
+}
+
+/* Sidebar */
+#cv .sidebar {
+    position: sticky;
+    top: 4rem;              /* sits just below your fixed header */
+    width: 180px;
+    padding: 1rem;
+    background: var(--background-color);
+    border-right: 1px solid var(--border-color);
+}
+
+#cv .sidebar ul {
+    list-style: none;
+}
+
+#cv .sidebar a {
+    display: block;
+    margin: 0.5rem 0;
+    padding: 0.25rem;
+    text-decoration: none;
+    color: var(--text-color);
+    border-radius: 4px;
+}
+
+#cv .sidebar a.active {
+    background: var(--accent-color);
+    color: #fff;
+}
+
+/* CV Content */
+#cv .cv-content {
+    flex: 1;
+    padding: 0 2rem;
+}
+
+#cv .card {
+    background: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+#cv .card h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Date badge */
+#cv .dates {
+    display: inline-block;
+    background: var(--accent-color);
+    color: #fff;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Work & Education items */
+#cv .work-item,
+#cv .edu-item {
+    display: flex;
+    margin-bottom: 1rem;
+}
+#cv .work-item .details h3,
+#cv .edu-item .details h3 {
+    margin-bottom: 0.25rem;
+    color: var(--accent-color);
+}
+#cv .company,
+#cv .institution {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+#cv .desc {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Lists */
+#cv .skill-list {
+    list-style: disc inside;
+    margin-top: 0.5rem;
+}
+#cv .skill-list {
+    margin: 0.3rem 0;
 }
 
 footer {
