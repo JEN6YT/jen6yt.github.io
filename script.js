@@ -70,3 +70,36 @@ toggle.addEventListener('click', function() {
         toggle.innerHTML = '&#9790;'; // Moon icon
     }
 });
+
+// Grab sidebar links and CV sections
+const cvNavLinks = document.querySelectorAll('#cv .sidebar a');
+const cvSections = document.querySelectorAll('#cv .cv-content section[id]');
+
+// Highlight on scroll
+function highlightCvLink() {
+    const marker = window.scrollY + window.innerHeight * 0.3;
+    cvSections.forEach(sec => {
+        const top    = sec.offsetTop;
+        const bottom = top + sec.offsetHeight;
+        const id     = sec.id;
+        const isActive = marker >= top && marker < bottom;
+
+        cvNavLinks.forEach(link => {
+        link.classList.toggle(
+            'active',
+            link.getAttribute('href') === `#${id}` && isActive
+        );
+        });
+    });
+}
+
+// Highlight immediately on click
+cvNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        cvNavLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+    });
+});
+
+window.addEventListener('scroll', highlightCvLink);
+window.addEventListener('load', highlightCvLink);
