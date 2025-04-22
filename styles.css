@@ -198,7 +198,11 @@ a:active {
 .experience-text {
     flex: 1 1 auto; /* take up remaining space */
     min-width: 0; /* prevent overflow */
-    margin-right: -3rem;
+    margin-right: -6rem;
+}
+
+.skills {
+    color : var(--accent-color);
 }
 
 footer {
