@@ -103,3 +103,26 @@ cvNavLinks.forEach(link => {
 
 window.addEventListener('scroll', highlightCvLink);
 window.addEventListener('load', highlightCvLink);
+
+// grab only sidebar links that point at hashes
+
+cvNavLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();  // stop the browser from doing a full navigation
+
+    const targetId = link.getAttribute('href').slice(1);    // "basics", "work", etc
+    const targetEl = document.getElementById(targetId);
+    if (!targetEl) return;
+
+    // scroll so that the top of the section sits nicely below any sticky header
+    targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    // optionally update the URL hash without causing another jump
+    history.replaceState(null, '', `#${targetId}`);
+
+    // immediately highlight the clicked link
+    internalLinks.forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
+  });
+});
+
