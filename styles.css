@@ -211,6 +211,7 @@ a:active {
 #cv .cv-wrapper {
     display: flex;
     margin-top: 2rem;
+    padding: 0 2rem 0;
     align-items: flex-start;
 }
 
