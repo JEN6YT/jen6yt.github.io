@@ -211,12 +211,14 @@ a:active {
 #cv .cv-wrapper {
     display: flex;
     margin-top: 2rem;
+    align-items: start;
 }
 
 /* Sidebar */
 #cv .sidebar {
     position: sticky;
     top: 4rem;              /* sits just below your fixed header */
+    align-self: flex-start; 
     width: 180px;
     padding: 1rem;
     background: var(--background-color);
