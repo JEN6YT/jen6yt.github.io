@@ -295,9 +295,9 @@ a:active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 80px;
     font-size: 0.9rem;
     color: var(--text-color);
+    width: 100px; /* fixed width for date column */
 }
 
 #cv .work-item .dates .date-range {
@@ -306,11 +306,14 @@ a:active {
 }
 
 .work-item .dates .date-logo {
-    width: 1rem;               /* adjust as needed */
-    height: auto;
     border-radius: 4px;        /* optional rounded corners */
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
     object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    margin-top: 1rem;
 }
 
 #cv .work-item .details {
