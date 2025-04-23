@@ -289,11 +289,11 @@ a:active {
     color: var(--text-color);
     flex-shrink: 0;
     gap: 0.5rem;
+    margin-top: 1rem;
 }
 
 #cv .edu-item .dates .date-range {
     font-weight: 600;
-    margin-top: 0.5rem;
 }
 
 #cv .edu-item .dates .school-logo {
@@ -319,7 +319,7 @@ a:active {
 #cv .work-item .dates .date-range {
     font-weight: 600;
     margin-bottom: 0.5rem;
-    margin-top: -0.5rem;
+    margin-top: -1rem;
 }
 
 #cv .work-item .dates .company-logo {
