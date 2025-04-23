@@ -116,7 +116,7 @@ a:active {
     display: flex;
     flex-direction: column; /* column layout */
     gap: 2rem; /* space between columns */
-    padding: 3rem 5rem 1rem;
+    padding: 3rem 5rem 0;
 }
 
 #about .about-header {
@@ -289,7 +289,7 @@ a:active {
     color: var(--text-color);
     flex-shrink: 0;
     gap: 0.5rem;
-    margin-top: 1.5rem;
+    margin-top: 1.3rem;
 }
 
 #cv .edu-item .dates .date-range {
@@ -366,6 +366,15 @@ html {
     scroll-behavior: smooth;
 }
 
+.skill-list {
+    list-style: none;
+    margin: 0.25rem 0 0 1rem; /* optional left‐indent so it lines up nicely */
+    padding: 0;
+}
+
+.skill-list li {
+    margin: 0.5rem 0;
+}
 
 footer {
     display: flex;
