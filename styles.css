@@ -306,7 +306,7 @@ a:active {
 }
 
 .work-item .dates .date-logo {
-    width: 40px;               /* adjust as needed */
+    width: 1rem;               /* adjust as needed */
     height: auto;
     border-radius: 4px;        /* optional rounded corners */
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
