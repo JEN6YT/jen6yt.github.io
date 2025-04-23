@@ -290,7 +290,7 @@ a:active {
     margin-left: 1rem;
 }
 
-#cv .dates {
+#cv .edu-item .dates {
     flex: 0 0 120px; /* fixed size */
     display: flex;
     flex-direction: column;
@@ -301,14 +301,40 @@ a:active {
     gap: 1rem;
 }
 
-#cv .dates .date-range {
+#cv .edu-item .dates .date-range {
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
-#cv .dates .company-logo {
+#cv .edu-item .dates .school-logo {
     object-fit: contain;
     max-width: 80px;
+    height: auto;
+    margin-top: 1rem;
+    display: block;
+}
+
+#cv .work-item .dates {
+    flex: 0 0 200px; /* fixed size */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    flex-shrink: 0;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+#cv .work-item .dates .date-range {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+#cv .work-item .dates .company-logo {
+    object-fit: contain;
+    max-width: 120px;
     height: auto;
     margin-top: 1rem;
     display: block;
