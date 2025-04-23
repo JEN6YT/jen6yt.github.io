@@ -310,9 +310,7 @@ a:active {
     border-radius: 4px;        /* optional rounded corners */
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
     object-fit: contain;
-    max-width: 30px;
-    width: auto;
-    height: auto;
+    max-width: 70px;
     margin-top: 1rem;
     display: block;
 }
