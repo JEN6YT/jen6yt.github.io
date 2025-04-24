@@ -210,8 +210,7 @@ a:active {
 #projects {
     clear: both; /* clear floats */
     margin-top: 2rem; 
-    padding: 1rem 5rem 1rem;
-    max-width: 70ch; /* ~70 characters for comfy reading */
+    padding: 1rem 6rem 1rem;
 }
 
 #projects .project-entry .project-meta {
@@ -226,7 +225,7 @@ a:active {
     gap: 0.5rem;
 }
 
-#projects .project-entry .project-actions .btn {
+#projects .project-entry .project-actions a {
     display: inline-block;
     padding: 0.2rem 0.6rem;
     font-size: 0.8rem;
@@ -238,14 +237,14 @@ a:active {
     transition: opacity 0.2s;
 }
 
-#projects .project-entry .project-actions .btn:hover,
-#projects .project-entry .project-actions .btn:focus,
-#projects .project-entry .project-actions .btn:active {
+#projects .project-entry .project-actions a:hover,
+#projects .project-entry .project-actions a:focus,
+#projects .project-entry .project-actions a:active {
     opacity: 0.8;
 }
 
-#projects .project-entry .project-actions .pdf     { background: #3b82f6; } /* blue */
-#projects .project-entry .project-actions .code    { background: #38bdf8; } /* sky */
+#projects .project-entry .project-actions a.btn_pdf { background: #3b82f6; } /* blue */
+#projects .project-entry .project-actions a.btn_code { background: #38bdf8; } /* sky */
 
 
 /* ==== CV Section ==== */
