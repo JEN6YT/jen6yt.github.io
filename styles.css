@@ -210,24 +210,22 @@ a:active {
 #projects {
     clear: both; /* clear floats */
     margin-top: 2rem; 
-    padding: 1rem 6rem 1rem;
+    padding: 1rem 10rem 1rem;
 }
 
 /* 1) indent and block out */
 .project-callout {
-    margin: 2rem 0 1rem 2rem;       /* 2rem from left, adjust as desired */
+    margin-left: 4rem;       /* 2rem from left, adjust as desired */
     padding: 1rem;                  /* inner padding */
     background-color: #f5f7fa;      /* very light gray/blue */
     border-radius: 0.375rem;        /* rounded corners */
-    /* optional: add a colored side‐border instead of full bg:
-       border-left: 4px solid #3b82f6;
-    */
+    border-color: 1px solid var(--border-color);
 }
   
 /* 2) tighten up the text */
 .callout-title {
     margin: 0 0 0.25rem;
-    font-size: 1.25rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 
