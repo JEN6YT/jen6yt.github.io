@@ -210,7 +210,7 @@ a:active {
 #projects {
     clear: both; /* clear floats */
     margin-top: 2rem; 
-    padding: 1rem 10rem 1rem;
+    padding: 1rem 14rem 1rem;
 }
 
 /* 1) indent and block out */
@@ -241,7 +241,6 @@ a:active {
     font-size: 0.875rem;
     text-decoration: none;
     color: #fff;
-    border-radius: 0.25rem;
     transition: opacity 0.2s;
 }
 .btn_pdf { background: #3b82f6; }
