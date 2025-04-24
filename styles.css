@@ -214,14 +214,6 @@ a:active {
     max-width: 70ch; /* ~70 characters for comfy reading */
 }
 
-
-#projects .project-entry {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-}
-
-
 /* ==== CV Section ==== */
 #cv .cv-wrapper {
     display: flex;
