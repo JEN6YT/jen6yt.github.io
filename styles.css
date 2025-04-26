@@ -222,13 +222,13 @@ a:active {
 /* 2) tighten up the text */
 .callout-title {
     margin: 0 0 0.25rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
 }
 
 .callout-authors {
     margin: 0 0 0.75rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--text-color);
 }
   
@@ -399,25 +399,37 @@ a:active {
 #cv .skill-list {
     list-style: disc inside;
     margin-top: 0.5rem;
-}
-#cv .skill-list {
     margin: 0.3rem 0;
 }
+
+.skill-list li {
+    margin: 0.5rem 0;
+}
+
+/* 1) make the container a flex row */
+.skills-container {
+    display: flex;
+    align-items: flex-start;   /* top-align text and image */
+    gap: 2rem;                  /* space between them */
+}
+
+/* 2) allow the text side to grow */
+.skills-content {
+    flex: 1;                    /* takes up available space */
+}
+
+.skills-image img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+  }
 
 /* Smooth scroll on anchor click */
 html {
     scroll-behavior: smooth;
 }
 
-.skill-list {
-    list-style: none;
-    margin: 0.25rem 0 0 1rem; /* optional left‐indent so it lines up nicely */
-    padding: 0;
-}
-
-.skill-list li {
-    margin: 0.5rem 0;
-}
 
 footer {
     display: flex;
