@@ -177,6 +177,7 @@ a:active {
     right: 1rem;
     width: 200px; /* fixed size */
     opacity: 0.8; /* semi-transparent */
+    z-index: 1000; /* above all other content */
 }
 
 #experience {
