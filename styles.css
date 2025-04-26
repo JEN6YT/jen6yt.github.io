@@ -171,6 +171,15 @@ a:active {
     filter: var(--icon-filter) drop-shadow(0 0 5px var(--accent-color));
 }
 
+#about .decorative-image {
+    position: fixed;
+    bottom: 2rem;
+    right: 1rem;
+    width: 200px; /* fixed size */
+    z-index: -1; /* behind the content */
+    opacity: 0.8; /* semi-transparent */
+}
+
 #experience {
     clear: both; /* clear floats */
     margin-top: 2rem; 
@@ -423,6 +432,7 @@ a:active {
     height: auto;
     border-radius: 4px;
     display: block;
+    margin-top: 1rem;
   }
 
 /* Smooth scroll on anchor click */
