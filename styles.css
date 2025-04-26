@@ -173,11 +173,11 @@ a:active {
 
 #about .decorative-image {
     position: fixed;
-    bottom: 2rem;
+    bottom: 3rem;
     right: 1rem;
     width: 200px; /* fixed size */
     opacity: 0.8; /* semi-transparent */
-    z-index: 1000; /* above all other content */
+    z-index: 9999; /* above all other content */
 }
 
 #experience {
@@ -446,7 +446,8 @@ footer {
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
     background-color: var(--background-color);
     color: var(--text-color);
+    z-index: -1;
 }
