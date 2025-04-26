@@ -176,7 +176,6 @@ a:active {
     bottom: 2rem;
     right: 1rem;
     width: 200px; /* fixed size */
-    z-index: -1; /* behind the content */
     opacity: 0.8; /* semi-transparent */
 }
 
