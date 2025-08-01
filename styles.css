@@ -133,9 +133,9 @@ a:active {
 }
 
 .about-image img {
-  width: auto;
-  max-width: 100%;
-  height: clamp(200px, 30vh, 350px);
+  /* make it smaller: never under 120px, ideally 20% of viewport width, never over 200px */
+  width: clamp(120px, 20vw, 200px);
+  height: auto;                 /* preserve aspect ratio */
   border-radius: 6px;
   object-fit: cover;
   border: 1px solid var(--border-color);
