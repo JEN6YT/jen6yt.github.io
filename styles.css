@@ -107,7 +107,7 @@ a:active {
 #about {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem;
   max-width: 90ch;
   margin: 0 auto;
   padding: 2rem 1rem 0;
