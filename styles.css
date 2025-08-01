@@ -141,6 +141,36 @@ a:active {
   border: 1px solid var(--border-color);
 }
 
+@media (min-width: 768px) {
+  /* turn header into a 2-col flex with equal heights */
+  #about .about-header {
+    display: flex;
+    align-items: stretch; /* stretch both children to same height */
+    gap: 2rem;
+  }
+
+  /* text takes 2/3 of the width */
+  .about-text {
+    flex: 2;
+  }
+
+  /* image column takes remaining space */
+  .about-image {
+    flex: 1;
+    display: flex;         /* make this a flex so img can stretch */
+    align-items: stretch;  /* stretch the img wrapper as well */
+  }
+
+  /* fill the wrapper’s full height */
+  .about-image img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+  }
+}
+
 .about-image .icons {
   display: flex;
   gap: 1rem;
