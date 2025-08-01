@@ -133,9 +133,9 @@ a:active {
 }
 
 .about-image img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
+  width: auto;
+  max-width: 100%;
+  height: clamp(200px, 30vh, 350px);
   border-radius: 6px;
   object-fit: cover;
   border: 1px solid var(--border-color);
