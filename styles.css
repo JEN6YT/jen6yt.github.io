@@ -146,7 +146,7 @@ a:active {
   #about .about-header {
     display: flex;
     align-items: stretch;
-    gap: 2rem;
+    gap: 1rem;
   }
   .about-text { flex: 2; }
   .about-image {
@@ -155,9 +155,9 @@ a:active {
     align-items: stretch;
   }
 
-  /* now size the image to 50% of that column’s height */
+  /* now size the image to 60% of that column’s height */
   .about-image img {
-    height: 50%;
+    height: 60%;
     width: auto;
     object-fit: cover;
     border-radius: 6px;
