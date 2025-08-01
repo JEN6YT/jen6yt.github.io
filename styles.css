@@ -1,184 +1,218 @@
-:root{
-    --background-color: #ecf0f1;
-    --text-color: #131c26;
-    --accent-color: #ef6c00;
-    --font-family: 'Arial', sans-serif;
-    --icon-color: #000;
-    --icon-filter: none;
-    --border-color: #ccc;
+:root {
+  --background-color: #ecf0f1;
+  --text-color: #131c26;
+  --accent-color: #ef6c00;
+  --font-family: 'Arial', sans-serif;
+  --icon-color: #000;
+  --icon-filter: none;
+  --border-color: #ccc;
 }
 
-/* used for the moon or sun icon */
+/* ── Dark-mode toggle button ───────────────────────────────────────────────── */
 #dark-mode-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    color: var(--text-color);
-    padding: 0;
-    transition: color 0.3s;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--text-color);
+  padding: 0;
+  transition: color 0.3s;
 }
 
-/* default light */
+/* ── Body & Dark Mode ───────────────────────────────────────────────────────── */
 body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: var(--font-family);
-    accent-color: var(--accent-color);
-    margin: 0;
-    padding: 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  accent-color: var(--accent-color);
+  margin: 0;
+  padding: 20px;
 }
 
 body.dark-mode {
-    --background-color: #131c26;
-    --text-color: #ecf0f1;
-    --accent-color: #ef6c00;
-    --font-family: 'Arial', sans-serif;
-    --icon-color: #fff;
-    --icon-filter: brightness(0) invert(1);
-    --border-color: #444;
+  --background-color: #131c26;
+  --text-color: #ecf0f1;
+  --accent-color: #ef6c00;
+  --icon-color: #fff;
+  --icon-filter: brightness(0) invert(1);
+  --border-color: #444;
 }
 
+/* ── Sticky Header ──────────────────────────────────────────────────────────── */
 header {
-    position: sticky; /* sticky header */
-    top: 0;
-    z-index: 1000; /* above all other content */
-    height: 3rem; /* height of the header */
-    /* Semi‑transparent background + blur */
-    background: rgba(255,255,255,0.6);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* safari */
-    /* Decoration */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: background 0.3s, box-shadow 0.3s;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 3rem;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: background 0.3s, box-shadow 0.3s;
 }
 
+/* ── Links ──────────────────────────────────────────────────────────────────── */
 a {
-    text-decoration: none;
-    color: var(--accent-color);
+  text-decoration: none;
+  color: var(--accent-color);
 }
-
 a:hover,
 a:focus,
-a:active { 
-    color: var(--accent-color); 
-    text-decoration: underline;
+a:active {
+  color: var(--accent-color);
+  text-decoration: underline;
 }
 
+/* ── Navigation ────────────────────────────────────────────────────────────── */
 .nav {
-    max-width: 1000px; 
-    margin: 0 auto; 
-    padding: 0.75rem 4rem;
-    display: flex; 
-    align-items: center; 
-    justify-content: flex-start;
-    gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0.75rem 4rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
-
-.logo a { 
-    font-weight: 500; 
-    font-size: 1.2rem; 
-    color: var(--text-color); 
-    text-decoration: none;
+.logo a {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--text-color);
 }
-
 .logo a:hover,
 .logo a:focus,
-.logo a:active { 
-    color: var(--accent-color); 
+.logo a:active {
+  color: var(--accent-color);
 }
-
 .nav-links {
-    display: flex;
-    gap: 1.5rem;
-    margin-left: auto;
+  display: flex;
+  gap: 1.5rem;
+  margin-left: auto;
 }
-
 .nav-links a {
-    position: relative; 
-    font-weight: 600; 
-    color: var(--text-color);
-    text-decoration: none;
+  position: relative;
+  font-weight: 600;
+  color: var(--text-color);
 }
-
 .nav-links a:hover,
 .nav-links a:focus,
-.nav-links a:active { 
-    color: var(--accent-color); 
+.nav-links a:active {
+  color: var(--accent-color);
 }
-
+/* remove any auto-underline bars */
 .logo a::after,
-.nav-links a::after{
-    display: none !important;         /* wipe out the bar */
+.nav-links a::after {
+  display: none !important;
 }
 
+/* ── About Section (mobile-first) ───────────────────────────────────────────── */
 #about {
-    display: flex;
-    flex-direction: column; /* column layout */
-    gap: 2rem; /* space between columns */
-    padding: 3rem 5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 90ch;
+  margin: 0 auto;
+  padding: 2rem 1rem 0;
 }
 
 #about .about-header {
-    display: flex;
-    flex-direction: row; /* row layout */
-    align-items: center; /* top-align the image and text */
-    gap: 4rem; /* space between the image and text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .about-text {
-    flex: 1 1 auto; /* take up remaining space */
-    margin-left: 4rem;        /* no margin */
-    max-width: 70ch;       /* ~70 characters for comfy reading */
+  max-width: 70ch;
+  line-height: 1.6;
 }
 
-.about-image {         /* photo + icons bundle */
-    flex: 0 0 auto; /* fixed size */
-    display: flex;
-    flex-direction: row; /* row layout: icons will sit to the right of the image */
-    align-items: flex-start; /* top-align the image and icons */
-    gap: 1rem;         /* space between the image and icons */
-    position: static;
+.about-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 .about-image img {
-    width: auto;
-    height: 500px; /* fixed height */
-    max-width: 100%; /* responsive */
-    border-radius: 6px;
-    object-fit: cover;
-    border: 1px solid var(--border);
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 1px solid var(--border-color);
 }
 
-.about-image .icons {          /* social row */
-    margin-top: 0.75rem;
-    margin-left: 2rem; /* space between the image and the icons */
-    display: flex;
-    gap: 1rem;
-    flex-direction: column; /* stack the icons in column */
+.about-image .icons {
+  display: flex;
+  gap: 1rem;
 }
 
-.about-image .icons img {    /* social icons */
-    filter: var(--icon-filter);
-    transition: filter 0.2s ease;
-    width: 24px;
-    height: 24px;
+.about-image .icons img {
+  filter: var(--icon-filter);
+  transition: filter 0.2s ease;
+  width: 24px;
+  height: 24px;
 }
-
 .about-image .icons img:hover,
 .about-image .icons img:focus,
-.about-image .icons img:active { 
-    filter: var(--icon-filter) drop-shadow(0 0 5px var(--accent-color));
+.about-image .icons img:active {
+  filter: var(--icon-filter) drop-shadow(0 0 5px var(--accent-color));
 }
 
 #about .decorative-image {
-    position: fixed;
-    bottom: 3rem;
-    right: 1rem;
-    width: 200px; /* fixed size */
-    opacity: 0.8; /* semi-transparent */
-    z-index: 9999; /* above all other content */
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 150px;
+  opacity: 0.8;
+  z-index: 9999;
 }
+
+/* ── Breakpoints ────────────────────────────────────────────────────────────── */
+/* Slightly larger phones & small tablets */
+@media (min-width: 600px) {
+  #about {
+    padding: 3rem 2rem 0;
+  }
+  #about .decorative-image {
+    width: 180px;
+  }
+}
+
+/* Tablets & laptops: side-by-side layout */
+@media (min-width: 768px) {
+  #about {
+    max-width: 1000px;
+    padding: 3rem 2rem 0;
+  }
+  #about .about-header {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 4rem;
+  }
+  .about-text {
+    flex: 2;
+  }
+  .about-image {
+    flex: 1;
+  }
+  #about .decorative-image {
+    width: 200px;
+    bottom: 2rem;
+    right: 2rem;
+  }
+}
+
+/* Large desktops & monitors */
+@media (min-width: 1200px) {
+  #about {
+    max-width: 1200px;
+    padding: 4rem 3rem 0;
+  }
+  #about .decorative-image {
+    width: 220px;
+  }
+}
+
 
 #experience {
     clear: both; /* clear floats */
