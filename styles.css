@@ -117,7 +117,7 @@ a:active {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .about-text {
@@ -134,41 +134,11 @@ a:active {
 
 .about-image img {
   /* make it smaller: never under 120px, ideally 20% of viewport width, never over 200px */
-  width: clamp(120px, 20vw, 200px);
+  width: clamp(150px, 20vw, 250px);
   height: auto;                 /* preserve aspect ratio */
   border-radius: 6px;
   object-fit: cover;
   border: 1px solid var(--border-color);
-}
-
-@media (min-width: 768px) {
-  /* keep your flex+stretch setup so the columns match height */
-  #about .about-header {
-    display: flex;
-    align-items: stretch;
-    gap: 1rem;
-  }
-  .about-text { flex: 2; }
-  .about-image {
-    flex: 1;
-    display: flex;
-    align-items: stretch;
-  }
-
-  /* now size the image to 60% of that column’s height */
-  .about-image img {
-    height: 60%;
-    width: auto;
-    object-fit: cover;
-    border-radius: 6px;
-    border: 1px solid var(--border-color);
-    max-width: none; /* so width can grow proportionally */
-  }
-}
-
-.about-image .icons {
-  display: flex;
-  gap: 1rem;
 }
 
 .about-image .icons img {
