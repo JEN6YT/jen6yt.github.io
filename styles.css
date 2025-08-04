@@ -266,7 +266,7 @@ a:active {
 
 .callout-authors {
     margin: 0 0 0.75rem;
-    font-size: 0.9rem;
+    /* font-size: 1rem; */
     color: var(--text-color);
 }
   
@@ -275,7 +275,7 @@ a:active {
     display: inline-block;
     margin-right: 0.5rem;
     padding: 0.25rem 0.75rem;
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     text-decoration: none;
     color: #fff;
     transition: opacity 0.2s;
