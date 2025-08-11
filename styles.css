@@ -60,9 +60,9 @@ a:hover, a:focus, a:active {
 
 /* Navigation - Mobile First */
 .nav {
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 0.75rem 1rem;
+  padding: 1rem 1rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -103,7 +103,7 @@ a:hover, a:focus, a:active {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 80ch;
+  max-width: 60ch;
   margin: 0 auto;
   padding: 2rem 1rem 0;
 }
@@ -158,8 +158,8 @@ a:hover, a:focus, a:active {
 #experience {
   clear: both;
   margin-top: 2rem;
-  padding: 1rem;
-  max-width: 80ch;
+  padding: 1rem 4rem;
+  max-width: 60ch;
   margin-left: auto;
   margin-right: auto;
 }
@@ -198,8 +198,8 @@ a:hover, a:focus, a:active {
 #projects {
   clear: both;
   margin-top: 2rem;
-  padding: 1rem;
-  max-width: 80ch;
+  padding: 1rem 6rem;
+  max-width: 60ch;
   margin-left: auto;
   margin-right: auto;
 }
@@ -248,7 +248,7 @@ a:hover, a:focus, a:active {
 #cv .cv-wrapper {
   display: flex;
   flex-direction: column;
-  margin: 1rem;
+  margin: 1rem 4rem;
   align-items: flex-start;
 }
 
@@ -402,7 +402,7 @@ footer {
 /* Slightly larger phones & small tablets */
 @media (min-width: 600px) {
   .nav {
-    padding: 0.75rem 2rem;
+    padding: 1rem 2rem;
     gap: 1.5rem;
   }
   
@@ -414,7 +414,7 @@ footer {
   }
   
   #experience, #projects {
-    padding: 2rem;
+    padding: 2rem 6rem;
   }
   
   .experience-entry img {
@@ -422,7 +422,7 @@ footer {
   }
   
   #cv .cv-wrapper {
-    margin: 1.5rem;
+    margin: 1.5rem 6rem;
   }
   
   #cv .card {
@@ -437,12 +437,12 @@ footer {
 /* Tablets & laptops: side-by-side layout */
 @media (min-width: 768px) {
   .nav {
-    padding: 0.75rem 3rem;
+    padding: 1rem 3rem;
     gap: 2rem;
   }
   
   #about {
-    max-width: 1000px;
+    max-width: 800px;
     padding: 3rem 2rem 0;
   }
   #about .about-header {
@@ -463,7 +463,7 @@ footer {
   }
   
   #experience, #projects {
-    padding: 2rem 3rem;
+    padding: 2rem 8rem;
   }
   
   .experience-entry {
@@ -482,7 +482,7 @@ footer {
   
   #cv .cv-wrapper {
     flex-direction: row;
-    margin: 2rem;
+    margin: 2rem 8rem;
   }
   
   #cv .sidebar {
@@ -551,11 +551,11 @@ footer {
 /* Large desktops & monitors */
 @media (min-width: 1200px) {
   .nav {
-    padding: 0.75rem 4rem;
+    padding: 1rem 4rem;
   }
   
   #about {
-    max-width: 1200px;
+    max-width: 1000px;
     padding: 4rem 3rem 0;
   }
   #about .decorative-image {
@@ -563,8 +563,8 @@ footer {
   }
   
   #experience, #projects {
-    padding: 2rem 5rem;
-    max-width: 1200px;
+    padding: 2rem 10rem;
+    max-width: 1000px;
   }
   
   .experience-entry {
@@ -572,7 +572,7 @@ footer {
   }
   
   #cv .cv-wrapper {
-    margin: 3rem;
+    margin: 3rem 10rem;
   }
   
   #cv .card {
