@@ -476,7 +476,7 @@ footer {
   }
   
   #cv .cv-wrapper {
-    margin: 1.5rem 6rem;
+    margin: 1.5rem 4rem;
   }
   
   #cv .card {
@@ -536,7 +536,7 @@ footer {
   
   #cv .cv-wrapper {
     flex-direction: row;
-    margin: 2rem 8rem;
+    margin: 2rem 4rem;
   }
   
   #cv .sidebar {
@@ -626,7 +626,7 @@ footer {
   }
   
   #cv .cv-wrapper {
-    margin: 3rem 10rem;
+    margin: 3rem 7rem;
   }
   
   #cv .card {
