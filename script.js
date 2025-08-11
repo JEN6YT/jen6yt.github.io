@@ -73,11 +73,34 @@ toggle.addEventListener('click', function() {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1) Grab sidebar links and CV sections
+    // Mobile menu toggle functionality
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        navLinks.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                navLinks.classList.remove('active');
+            }
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+                navLinks.classList.remove('active');
+            }
+        });
+    }
+
+    // Your existing CV navigation code
     const cvNavLinks = document.querySelectorAll('#cv .sidebar a[href^="#"]');
     const cvSections = document.querySelectorAll('#cv .cv-content section[id]');
   
-    // 2) Scroll-spy: highlight on scroll (and on initial load)
     function highlightCvLink() {
       const marker = window.scrollY + window.innerHeight * 0.3;
       cvSections.forEach(sec => {
@@ -98,7 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', highlightCvLink);
     window.addEventListener('load',   highlightCvLink);
   
-    // 3) Single click-handler: prevent default, scroll, update hash, highlight
     cvNavLinks.forEach(link => {
       link.addEventListener('click', e => {
         e.preventDefault();
@@ -110,17 +132,12 @@ document.addEventListener('DOMContentLoaded', () => {
           return;
         }
   
-        // Smoothly scroll so that scroll-margin-top applies
         targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  
-        // Update URL without jumping again
         history.replaceState(null, '', `#${targetId}`);
   
-        // Highlight immediately
         cvNavLinks.forEach(l => l.classList.remove('active'));
         link.classList.add('active');
       });
     });
-  });
-  
+});
   

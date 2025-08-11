@@ -67,36 +67,65 @@ a:hover, a:focus, a:active {
   padding: 0 1rem;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+  justify-content: space-between;
   height: 100%;
+  position: relative;
+}
+
+/* Mobile hamburger menu */
+.nav-toggle {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+.nav-links {
+  position: fixed;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  background: var(--background-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem;
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+.nav-links a {
+  position: relative;
+  font-weight: 600;
+  color: var(--text-color);
+  padding: 0.75rem;
+  border-radius: 4px;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.nav-links a:hover, .nav-links a:focus, .nav-links a:active {
+  color: var(--accent-color);
+  background: rgba(239, 108, 0, 0.1);
 }
 .logo a {
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--text-color);
 }
 .logo a:hover, .logo a:focus, .logo a:active {
   color: var(--accent-color);
 }
-.nav-links {
-  display: flex;
-  gap: 1rem;
-  margin-left: auto;
-  flex-wrap: wrap;
-}
-.nav-links a {
-  position: relative;
-  font-weight: 600;
-  color: var(--text-color);
-  min-height: 44px;
-  display: flex;
-  align-items: center;
-  padding: 0.5rem;
-}
-.nav-links a:hover, .nav-links a:focus, .nav-links a:active {
-  color: var(--accent-color);
-}
+
 .logo a::after, .nav-links a::after {
   display: none !important;
 }
@@ -106,9 +135,9 @@ a:hover, a:focus, a:active {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 60ch;
+  max-width: 90%;
   margin: 0 auto;
-  padding: 2rem 1rem 0;
+  padding: 1rem;
 }
 
 #about .about-header {
@@ -161,14 +190,14 @@ a:hover, a:focus, a:active {
 #experience {
   clear: both;
   margin-top: 2rem;
-  padding: 1rem 4rem;
-  max-width: 60ch;
+  padding: 1rem;
+  max-width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
 
 #experience h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-bottom: 0.5rem;
 }
 
@@ -201,8 +230,8 @@ a:hover, a:focus, a:active {
 #projects {
   clear: both;
   margin-top: 2rem;
-  padding: 1rem 6rem;
-  max-width: 60ch;
+  padding: 1rem;
+  max-width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -251,7 +280,7 @@ a:hover, a:focus, a:active {
 #cv .cv-wrapper {
   display: flex;
   flex-direction: column;
-  margin: 1rem 4rem;
+  margin: 1rem 0.5rem;
   align-items: flex-start;
 }
 
@@ -406,11 +435,32 @@ footer {
 @media (min-width: 600px) {
   .nav {
     padding: 0 2rem;
+  }
+  
+  .nav-toggle {
+    display: none;
+  }
+  
+  .nav-links {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    background: none;
+    border: none;
+    padding: 0;
     gap: 1.5rem;
+    margin-left: auto;
+    box-shadow: none;
+  }
+  
+  .nav-links a {
+    padding: 0.5rem;
+    text-align: left;
   }
   
   #about {
     padding: 3rem 2rem 0;
+    max-width: 60ch;
   }
   #about .decorative-image {
     width: 180px;
@@ -418,6 +468,7 @@ footer {
   
   #experience, #projects {
     padding: 2rem 6rem;
+    max-width: 60ch;
   }
   
   .experience-entry img {
