@@ -242,10 +242,11 @@ a:hover, a:focus, a:active {
 
 /* Collapsible abstract */
 .project-abstract {
+  display: block;
   margin: 0 0 0.5rem;
-  border: 1px solid #e5e7eb; /* light gray */
-  border-radius: 8px;
-  background: var(--background-color, #fff);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
   overflow: hidden;
   display: block; /* helps in some browsers */
 }
@@ -253,9 +254,10 @@ a:hover, a:focus, a:active {
 /* Button-like tab */
 .abstract-toggle {
   display: inline-flex;   /* shrink to fit text + caret */
+  width: auto;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.5rem 0;      /* vertical padding only */
+  padding: 0;      /* vertical padding only */
   font-weight: 600;
   background: transparent;
   color: #ef6c00;         /* orange text */
@@ -280,10 +282,17 @@ a:hover, a:focus, a:active {
 
 /* body */
 .abstract-box {
+  display: block;
+  width: 100%;                 /* full width of your text column */
+  margin-top: 0.4rem;
   padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: var(--background-color, #fff);
+  color: var(--text-color, #111);
   line-height: 1.6;
-  color: var(--text-color, #fac46e);
 }
+
 
 /* collapsed preview with gradient fade */
 .project-abstract[data-collapsed] .abstract-box {
