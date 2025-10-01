@@ -258,7 +258,8 @@ a:hover, a:focus, a:active {
   user-select: none;
   padding: 0.5rem 0.75rem;
   font-weight: 600;
-  background: #e8b17a; /* header bg */
+  background: #ffffff; /* header bg */
+  color: #f5a563;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -316,7 +317,7 @@ a:hover, a:focus, a:active {
 }
 
 .callout-authors {
-  margin: 0 0 0.1rem;
+  margin: 0.1rem 0 0;
   color: var(--text-color);
 }
 
