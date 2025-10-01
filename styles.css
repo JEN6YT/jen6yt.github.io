@@ -303,6 +303,7 @@ a:hover, a:focus, a:active {
 .project-abstract[open] .abstract-box { max-height: none; }
 
 .project-callout {
+  margin-bottom: 0rem;
   padding: 1rem;
   background-color: var(--background-color);
 }
