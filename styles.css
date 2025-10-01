@@ -324,7 +324,7 @@ a:hover, a:focus, a:active {
 }
 
 .callout-authors {
-  margin: 0.5rem 0 0;
+  margin: 0.5rem 0 0.75rem;
   color: var(--text-color);
 }
 
