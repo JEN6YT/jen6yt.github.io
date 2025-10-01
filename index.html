@@ -33,7 +33,7 @@
                         <a href="https://engsci.utoronto.ca/" target="_blank">Engineering Science</a> at University of Toronto. 
                         During this program, I have learnt about engineering disciplines, programming skills, and various interdisciplinary topics.
                         In addition, I have developed a strong interest in data science and machine learning.
-                        My current research focuses on <b>Large Foundation Models</b>, <b>Reinforcement Learning</b>, and <b>AI for Social</b> (multi-agent interactions and agent-human alignment).
+                        My current research focuses on <b>Large Foundation Models Alignment</b>, <b>Reinforcement Learning</b>, and <b>Agent-Human Alignment</b> (multi-agent interactions and alignment).
                         I am deeply interested in using AI to solve real-world problems, and I am particularly fascinated by the potential of AI to enhance human capabilities, and for social good.
                     </p>
                     <p>In my free time, I enjoy outdoor activities and exploring new technologies. If you would love to have a chat, feel free to shoot me an email! </p>
@@ -66,104 +66,110 @@
                 <div class="project-callout">
                     <p class="callout-authors">
                         Jerry Yao-Chieh Hu<sup class="big-star">*</sup>, Hude Liu<sup class="big-star">*</sup>, <strong>Jennifer Yuntong Zhang<sup class="big-star">*</sup></strong>, Han Liu<br>
-                        In submission to Neurips 2025.
+                        In submission to ICLR 2026.
                     </p>
                     <div class="project-actions">
-                        <a href="https://arxiv.org/pdf/2508.17550" class="btn_pdf">pdf</a>
+                        <!-- TODO: update link -->
+                        <a href="https://arxiv.org/abs/2508.17550" class="btn_pdf">pdf</a>
                         <a href="https://github.com/MAGICS-LAB/algo_emu" class="btn_code">code</a>
                     </div>
                 </div>
-                <p>We show that a frozen Softmax Attention Layer can emulate Attention, gradient descent, Linear Regression, LASSO, and Ridge. 
-                    We mathematically prove that with attention layer mimick properties of linear functions by embedding true algorithm weights in the input prompt. We empirically demonstrate that 
-                    approximation accuracy increases with an increasing number of attention heads with both synthetic and real world data. Our result provides a fundamental theory of a minimalist Transformer structure
-                    for internal algorithm swapping, demonstrating the ability of frozen Transformer emulating algorithms.</p>
+                <p>We prove that a minimal Transformer with frozen weights emulates a broad class of algorithms by in-context prompting. 
+                    We formalize two modes of in-context algorithm emulation. In the task-specific mode, for any continuous function, we show the existence of a single-head softmax attention layer whose forward pass reproduces machine learning algorithms.
+                    In the prompt-programmable mode, we prove universality: a single fixed-weight two-layer softmax attention module emulates all algorithms from the task-specific class (i.e., each implementable by a single softmax attention) via only prompting.
+                    Our key idea is to construct prompts that encode an algorithm's parameters into token representations, creating sharp dot-product gaps that force the softmax attention to follow the intended computation.
+                    This construction requires no feed-forward layers and no parameter updates. All adaptation happens through the prompt alone. Numerical results corroborate our theory.
+                    These findings forge a direct link between in-context learning and algorithmic emulation, and offer a simple mechanism for large Transformers to serve as prompt-programmable libraries of algorithms. 
+                    They illuminate how GPT-style foundation models may swap algorithms via prompts alone, and establish a form of algorithmic universality in modern Transformer models.</p>
             </div>
 
             <div class="project-entry">
-                <h3>Weakly Supervised GRPO @ McAuley Lab, UCSD</h3>
-                <!-- <p><em>with <a href="https://cseweb.ucsd.edu/~jmcauley/">Prof. Julian McAuley</a></em></p> -->
-                <p>TBD.</p>
-            </div>
-
-            <div class="project-entry">
-                <h3>Multi-Modal Chain of Thought and Reasoning @ McAuley Lab, UCSD</h3>
-                <p>TBD.</p>
-            </div>
-
-            <div class="project-entry">
-                <h3>Survey Paper on RL @ McAuley Lab, UCSD</h3>
-                <p>TBD.</p>
-            </div>
-
-            <div class="project-entry">
-                <h3>Deep Learning of Structured and Continuous Policies for Aggregated Heterogeneous Treatment Effects</h3>
-                <p><em>with <a href="https://ai.stanford.edu/~wzou/">Dr. Will Y. Zou</a> and <a href="https://www.linkedin.com/in/shuyang-du/">Shuyang Du</a></em></p>
+                <h3>Are Hallucinations Bad Estimators? @ MAGICS, Northwestern University</h3>
                 <div class="project-callout">
                     <p class="callout-authors">
-                        <strong>Jennifer Yuntong Zhang</strong>, Shuyang Du, Will Y. Zou<br>
+                        Hude Liu<sup class="big-star">*</sup>, Jerry Yao-Chieh Hu<sup class="big-star">*</sup>, <strong>Jennifer Yuntong Zhang</strong>, Zhao Song, Han Liu<br>
+                        In submission to ICLR 2026.
                     </p>
                     <div class="project-actions">
-                        <a href="https://arxiv.org/html/2507.05511v1" class="btn_pdf">pdf</a>
-                        <a href="https://github.com/JEN6YT/HCL" class="btn_code">code</a>
+                        <!-- TODO: update link -->
+                        <a href="https://www.arxiv.org/abs/2509.21473" class="btn_pdf">pdf</a>
+                        <a href="https://github.com/MAGICS-LAB/hallucination" class="btn_code">code</a>
                     </div>
                 </div>
-                <p>Existing work on HTE adapts well on binary treatment action space (treated or not), lacking continuous treatment policy where treatment intensities play a crutial role.
-                    In this work, we propose a novel deep learning framework to learn structured and continuous treatment policies for HTE estimation.
-                    We construct a Neural-Augmented Naive Bayes layer within a deep learning framework to incorporate an arbitrary number of factors that satisfies the Naive Bayes assumption. 
-                    The factored layer is then applied with continuous treatment variables, treatment assignment, and direct ranking of aggregated treatment effect functions. 
-                    Together, these algorithms build towards a generic framework for deep learning of heterogeneous treatment policies, and we show their power to improve performance with public datasets.
+                <p>We formalize hallucinations in generative models as failures to link an estimate to any plausible cause. 
+                    Under this interpretation, we show that even loss-minimizing optimal estimators still hallucinate.
+                    We confirm this with a general high probability lower bound on hallucinate rate for generic data distributions.
+                    This reframes hallucination as structural misalignment between loss minimization and human-acceptable outputs, and hence estimation errors induced by miscalibration.
+                    Experiments on coin aggregation, open-ended QA, and text-to-image support our theory.</p>
+            </div>
+
+
+            <div class="project-entry">
+                <h3>WS-GRPO: Weakly-Supervised Group-Relative Policy Optimization @ McAuley Lab, UCSD</h3>
+                <!-- <p><em>with <a href="https://cseweb.ucsd.edu/~jmcauley/">Prof. Julian McAuley</a></em></p> -->
+                 <div class="project-callout">
+                    <p class="callout-authors">
+                        Gagan Mundada, Rohan Surana, <strong>Jennifer Yuntong Zhang</strong>, Xintong Li, Tong Yu, Lina Yao, Jingbo Shang, Julian McAuley, Junda Wu<br>
+                        In submission to ICLR 2026.
+                    </p>
+                    <!-- <div class="project-actions">
+                        <a href="https://arxiv.org/pdf/2508.17550" class="btn_pdf">pdf</a>
+                        <a href="https://github.com/MAGICS-LAB/hallucination" class="btn_code">code</a>
+                    </div> -->
+                </div>
+                <p>Group-Relative Policy Optimization (GRPO) has emerged as an effective approach for training language models on complex reasoning tasks by normalizing rewards within groups of rollouts. 
+                    However, GRPO's group-relative advantage estimation critically depends on dense step-wise reward signals throughout the reasoning process. 
+                    In practice, obtaining such dense supervision requires expensive human annotations of intermediate reasoning steps or carefully designed step-wise reward functions. 
+                    This creates a significant challenge specific to group-relative methods: while GRPO performs best with dense intermediate feedback, real-world scenarios often provide only sparse outcome supervision—such as final answer correctness or binary trajectory labels.
+                    We propose Weakly-Supervised Group-Relative Policy Optimization (WS-GRPO), which addresses this unique limitation by learning to extract dense preference signals from sparse outcome supervision while preserving GRPO's group-relative normalization benefits. 
+                    WS-GRPO operates in two phases: first, it trains a preference model to distinguish between successful and unsuccessful reasoning patterns using only trajectory-level outcomes; second, it leverages this learned preference model to provide step-wise weakly-supervised rewards that are combined with sparse terminal rewards during group-relative policy optimization. 
+                    By treating consecutive partial trajectories as preference pairs, our method generates dense feedback signals that complement GRPO's group normalization mechanism without requiring step-by-step human annotations.
+                    Theoretically, we provide comprehensive guarantees for WS-GRPO establishing preference model consistency under trajectory-level supervision, policy robustness to preference errors with controllable degradation rates, and generalization bounds that decompose error sources across policy learning, preference modeling, and their interaction. 
+                    Our experiments on reasoning benchmarks demonstrate that WS-GRPO achieves competitive performance using only weak supervision, making group-relative policy optimization practical when detailed process supervision is limited.</p>
+            </div>
+
+            <div class="project-entry">
+                <h3>SceneAlign: Aligning Multimodal Reasoning to Scene Graphs in Complex Visual Scenes @ McAuley Lab, UCSD</h3>
+                <div class="project-callout">
+                    <p class="callout-authors">
+                        Chuhan Wang, <strong>Jennifer Yuntong Zhang</strong>, Junda Wu, Xintong Li, Tong Yu, Jingbo Shang, Julian McAuley<br>
+                        In progress. Target: CVPR 2026.
+                    </p>
+                    <!-- <div class="project-actions">
+                        <a href="https://arxiv.org/pdf/2508.17550" class="btn_pdf">pdf</a>
+                        <a href="https://github.com/MAGICS-LAB/hallucination" class="btn_code">code</a>
+                    </div> -->
+                </div>
+                <p>Multimodal Large Language Models (MLLMs) often fail to reason faithfully in complex visual scenes, where multiple objects and intricate relations demand precise grounding of each reasoning step. Prior works improve reasoning via preference-based alignment using simple textual perturbations or answer-based edits, but they do not explicitly tackle grounding failures
+                    such as hallucinated entities, incorrect bindings, or omit steps. Motivated by the need for grounding-aware supervision, we propose SceneAlign, a scene-graph-guided preference alignment framework that explicitly supervises grounding during reasoning. 
+                    Scene graphs, which encode objects and relations as structured graphs, allow us to (1) identify reasoning-critical nodes and (2) perturb them using four targeted strategies—swap, replace, shorten, overthink—designed to simulate typical grounding errors including hallucination, mis-grounding, skipped inference, and over-specification. 
+                    These perturbed scene graphs and their corresponding rationales form ungrounded negative chains-of-thought (CoTs), which are filtered for fluency and paired with their grounded counterparts. 
+                    To ensure the model learns preferences for faithful structure-grounded reasoning, we apply Direct Preference Optimization (DPO) to align the model behavior toward coherence and accuracy.. Experiments across seven complex visual reasoning benchmarks show that ourmodel significantly improves both answer correctness and reasoning consistency, establishing a new paradigm for grounding-aware CoT supervision.
                 </p>
             </div>
 
-            <div class="project-entry">
-                <h3>Neural Inhibition Improves Dynamic Routing and Mixture of Experts</h3>
-                <p><em>with <a href="https://ai.stanford.edu/~wzou/">Dr. Will Y. Zou</a> </em></p>
-                <div class="project-callout">
-                    <p class="callout-authors">
-                        Will Y. Zou, <strong>Jennifer Yuntong Zhang</strong><br>
-                    </p>
-                    <div class="project-actions">
-                        <a href="https://arxiv.org/abs/2507.03221" class="btn_pdf">pdf</a>
-                        <a href="https://github.com/wzoustanford/inhibition" class="btn_code">code</a>
-                    </div>
-                </div>
-                <p>This study posits that a global inhibition deep network with gating among arbitrary neurons improves Mixture of Expert models.
-                    We validate our position by providing proof-of-concept experiments in vision and language tasks.</p>
-            </div>
-
-            <div class="project-entry">
-                <h3>Hebbian Learning and Local Inhibition @ Social AI Lab, UofT</h3>
-                <p><em>with <a href="https://vectorinstitute.ai/team/william-cunningham/">Prof. William Cunningham</a></em></p>
-                <p>This project investigats biologically plausible neural network architecture. Inspired by Hebbian rule, Locally Competitive Algorithm, predictive coding,
-                    we develop activation and weight update rule based on minimizing a pre-defined "energy" function (i.e. aggrgated reconstruction error of the network for all layers with top-down feedback for later layers). 
-                    We evaluate its performance on standard benchmarks such as MNIST, Cifar10, and ImageNet, and it achieves SOTA performance. In addition, we deploy visualizaiton techniques to verify
-                    model interpretability and biologically plausibility.</p>
-            </div>
-
-            <div class="project-entry">
-                <h3>Methane Emission Drivers and Baseline Calculations @ Risk Lab, UofT </h3>
-                <!-- <p><em>with <a href="https://seco.risklab.ca/">Prof. Luis Seco</a></em></p> -->
-                <div class="project-callout">
-                    <p class="callout-authors">
-                        <strong>Yuntong Zhang</strong>, Behzad Azadie Faraz, Luis Seco<br>
-                        In ADIA Lab.
-                    </p>
-                    <div class="project-actions">
-                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5045567" class="btn_pdf">pdf</a>
-                        <a href="https://github.com/JEN6YT/Methane-Emission-Index" class="btn_code">code</a>
-                    </div>
-                </div>
-                <p>This study presents a comprehensive analysis of feature importance selection methods aimed at identifying the key drivers of methane emissions globally. We identify 8 critical features among 
-                    58 contributing most to methane emissions. In addition, we apply 4 machine learning models, Support Vector Machine, LightGBM, XGBoost, and Random Forest, to estimate methane level across various countries. 
-                    Moreover, we determine and anlayze the local and global trend for methane emission across 220 countries and identify the top countries that have the steadiest and the most decrease as well the most increase in methane emission in the recent 30 years.</p>
-            </div>
-
             <!-- <div class="project-entry">
-                <h3>Self-Supervised Learning (SSL) and Second-order Optimization @ Multimedia Lab, UofT</h3>
-                <p><em>with <a href="https://mila.quebec/en/directory/mahdi-hosseini">Prof. Mahdi Hosseini</a></em></p>
-                <p>We explored SSL such as Barlow Twins and DINO with second-order optimization techniques such as KFAC, TEKFAC, and AdaFisher on the task of medical image classification and other downstream tasks.
-                    We created a benchmark by comparing those SSL and optimization methods on the downstream tasks.</p>
+                <h3>Survey Paper on RL @ McAuley Lab, UCSD</h3>
+                <p>TBD.</p>
             </div> -->
+
+            <div class="project-entry">
+                <h3>Realistic CDSS Drug Dosing with End-to-end Recurrent Q-learning for Dual Vasopressor Control</h3>
+                <div class="project-callout">
+                    <p class="callout-authors">
+                        Will Y. Zou, Jean Feng, Alexandre Kalimouttou, <strong>Jennifer Yuntong Zhang</strong>, Christopher W. Seymour, Romain Pirracchio<br>
+                    </p>
+                    <div class="project-actions">
+                        <a href="https://openreview.net/pdf?id=TNj4Cv73Gh" class="btn_pdf">pdf</a>
+                        <!-- <a href="https://github.com/JEN6YT/HCL" class="btn_code">code</a> -->
+                    </div>
+                </div>
+                <p>Reinforcement learning (RL) applications in Clinical Decision Support Systems (CDSS) frequently encounter skepticism from practitioners regarding inoperable dosing decisions. We address this challenge with an end-to-end approach for learning optimal drug dosing and control policies for dual vasopressor administration in intensive care unit (ICU) patients with septic shock. 
+                    For realistic drug dosing, we apply action space design that accommodates discrete, continuous, and directional dosing strategies in a system that combines offline conservative Q-learning with a novel recurrent modeling in a replay buffer to capture temporal dependencies in ICU time-series data. 
+                    Our comparative analysis of norepinephrine dosing strategies across different action space formulations reveals that the designed action spaces improve interpretability and facilitate clinical adoption while preserving efficacy. 
+                    Empirical results on eICUand MIMIC demonstrate that action space design profoundly influences learned behavioral policies. The proposed methods achieve improved patient outcomes of over 15% in survival improvement probability, while aligning with established clinical protocols.
+                </p>
+            </div>
         </section>
 
         <section id="cv">
