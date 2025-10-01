@@ -242,7 +242,7 @@ a:hover, a:focus, a:active {
 
 /* Collapsible abstract */
 .project-abstract {
-  margin-top: 0.75rem;
+  margin-top: 0.1rem;
   border: 1px solid #e5e7eb; /* light gray */
   border-radius: 8px;
   background: var(--background-color, #fff);
@@ -282,7 +282,7 @@ a:hover, a:focus, a:active {
 .abstract-box {
   padding: 0.75rem;
   line-height: 1.6;
-  color: var(--text-color, #111);
+  color: var(--text-color, #fac46e);
 }
 
 /* collapsed preview with gradient fade */
@@ -296,7 +296,7 @@ a:hover, a:focus, a:active {
   position: absolute;
   inset: auto 0 0 0;
   height: 2.5rem;
-  background: linear-gradient(to bottom, rgba(255,255,255,0), var(--background-color, #fff));
+  background: linear-gradient(to bottom, rgba(255,255,255,0), var(--background-color, #ffffff));
 }
 
 /* when open, unclamp */

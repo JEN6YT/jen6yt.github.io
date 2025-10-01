@@ -36,7 +36,7 @@
                         My current research focuses on <b>Large Foundation Models Alignment</b>, <b>Reinforcement Learning</b>, and <b>Agent-Human Alignment</b> (multi-agent interactions and alignment).
                         I am deeply interested in using AI to solve real-world problems, and I am particularly fascinated by the potential of AI to enhance human capabilities, and for social good.
                     </p>
-                    <p>In my free time, I enjoy outdoor activities and sports. I love exploring new technologies: you can see my blog posts here. If you would love to have a chat, feel free to shoot me an email! </p>
+                    <p>In my free time, I enjoy outdoor activities and sports. I love exploring new technologies: you can see my blog posts <url></url>. If you would love to have a chat, feel free to shoot me an email! </p>
                 </div>
                 <div class="about-image">
                     <img src="./assets/jennifer.jpg" alt="Jennifer Zhang" />
@@ -120,7 +120,7 @@
                     </div> -->
                 </div>
                 <details class="project-abstract" data-collapsed>
-                    <summary class="abstract-toggle">Read more</summary>
+                    <summary class="abstract-toggle">Abstract</summary>
                     <div class="abstract-box">
                         <p>
                         Group-Relative Policy Optimization (GRPO) has emerged as an effective approach for training language models on complex reasoning tasks by normalizing rewards within groups of rollouts. 
@@ -149,12 +149,17 @@
                         <a href="https://github.com/MAGICS-LAB/hallucination" class="btn_code">code</a>
                     </div> -->
                 </div>
-                <p>Multimodal Large Language Models (MLLMs) often fail to reason faithfully in complex visual scenes, where multiple objects and intricate relations demand precise grounding of each reasoning step. Prior works improve reasoning via preference-based alignment using simple textual perturbations or answer-based edits, but they do not explicitly tackle grounding failures
-                    such as hallucinated entities, incorrect bindings, or omit steps. Motivated by the need for grounding-aware supervision, we propose SceneAlign, a scene-graph-guided preference alignment framework that explicitly supervises grounding during reasoning. 
-                    Scene graphs, which encode objects and relations as structured graphs, allow us to (1) identify reasoning-critical nodes and (2) perturb them using four targeted strategies—swap, replace, shorten, overthink—designed to simulate typical grounding errors including hallucination, mis-grounding, skipped inference, and over-specification. 
-                    These perturbed scene graphs and their corresponding rationales form ungrounded negative chains-of-thought (CoTs), which are filtered for fluency and paired with their grounded counterparts. 
-                    To ensure the model learns preferences for faithful structure-grounded reasoning, we apply Direct Preference Optimization (DPO) to align the model behavior toward coherence and accuracy.. Experiments across seven complex visual reasoning benchmarks show that ourmodel significantly improves both answer correctness and reasoning consistency, establishing a new paradigm for grounding-aware CoT supervision.
-                </p>
+                <details class="project-abstract" data-collapsed>
+                    <summary class="abstract-toggle">Abstract</summary>
+                    <div class="abstract-box">
+                        <p>Multimodal Large Language Models (MLLMs) often fail to reason faithfully in complex visual scenes, where multiple objects and intricate relations demand precise grounding of each reasoning step. Prior works improve reasoning via preference-based alignment using simple textual perturbations or answer-based edits, but they do not explicitly tackle grounding failures
+                            such as hallucinated entities, incorrect bindings, or omit steps. Motivated by the need for grounding-aware supervision, we propose SceneAlign, a scene-graph-guided preference alignment framework that explicitly supervises grounding during reasoning. 
+                            Scene graphs, which encode objects and relations as structured graphs, allow us to (1) identify reasoning-critical nodes and (2) perturb them using four targeted strategies—swap, replace, shorten, overthink—designed to simulate typical grounding errors including hallucination, mis-grounding, skipped inference, and over-specification. 
+                            These perturbed scene graphs and their corresponding rationales form ungrounded negative chains-of-thought (CoTs), which are filtered for fluency and paired with their grounded counterparts. 
+                            To ensure the model learns preferences for faithful structure-grounded reasoning, we apply Direct Preference Optimization (DPO) to align the model behavior toward coherence and accuracy.. Experiments across seven complex visual reasoning benchmarks show that ourmodel significantly improves both answer correctness and reasoning consistency, establishing a new paradigm for grounding-aware CoT supervision.
+                        </p>
+                    </div>
+                </details>
             </div>
 
             <!-- <div class="project-entry">
