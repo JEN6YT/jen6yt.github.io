@@ -74,13 +74,14 @@
                         <a href="https://github.com/MAGICS-LAB/algo_emu" class="btn_code">code</a>
                     </div>
                 </div>
-                <p>We prove that a minimal Transformer with frozen weights emulates a broad class of algorithms by in-context prompting. 
+                <!-- <p>We prove that a minimal Transformer with frozen weights emulates a broad class of algorithms by in-context prompting. 
                     We formalize two modes of in-context algorithm emulation. In the task-specific mode, for any continuous function, we show the existence of a single-head softmax attention layer whose forward pass reproduces machine learning algorithms.
                     In the prompt-programmable mode, we prove universality: a single fixed-weight two-layer softmax attention module emulates all algorithms from the task-specific class (i.e., each implementable by a single softmax attention) via only prompting.
                     Our key idea is to construct prompts that encode an algorithm's parameters into token representations, creating sharp dot-product gaps that force the softmax attention to follow the intended computation.
                     This construction requires no feed-forward layers and no parameter updates. All adaptation happens through the prompt alone. Numerical results corroborate our theory.
                     These findings forge a direct link between in-context learning and algorithmic emulation, and offer a simple mechanism for large Transformers to serve as prompt-programmable libraries of algorithms. 
-                    They illuminate how GPT-style foundation models may swap algorithms via prompts alone, and establish a form of algorithmic universality in modern Transformer models.</p>
+                    They illuminate how GPT-style foundation models may swap algorithms via prompts alone, and establish a form of algorithmic universality in modern Transformer models.
+                </p> -->
             </div>
 
             <div class="project-entry">
@@ -96,11 +97,12 @@
                         <a href="https://github.com/MAGICS-LAB/hallucination" class="btn_code">code</a>
                     </div>
                 </div>
-                <p>We formalize hallucinations in generative models as failures to link an estimate to any plausible cause. 
+                <!-- <p>We formalize hallucinations in generative models as failures to link an estimate to any plausible cause. 
                     Under this interpretation, we show that even loss-minimizing optimal estimators still hallucinate.
                     We confirm this with a general high probability lower bound on hallucinate rate for generic data distributions.
                     This reframes hallucination as structural misalignment between loss minimization and human-acceptable outputs, and hence estimation errors induced by miscalibration.
-                    Experiments on coin aggregation, open-ended QA, and text-to-image support our theory.</p>
+                    Experiments on coin aggregation, open-ended QA, and text-to-image support our theory.
+                </p> -->
             </div>
 
 
@@ -125,7 +127,8 @@
                     WS-GRPO operates in two phases: first, it trains a preference model to distinguish between successful and unsuccessful reasoning patterns using only trajectory-level outcomes; second, it leverages this learned preference model to provide step-wise weakly-supervised rewards that are combined with sparse terminal rewards during group-relative policy optimization. 
                     By treating consecutive partial trajectories as preference pairs, our method generates dense feedback signals that complement GRPO's group normalization mechanism without requiring step-by-step human annotations.
                     Theoretically, we provide comprehensive guarantees for WS-GRPO establishing preference model consistency under trajectory-level supervision, policy robustness to preference errors with controllable degradation rates, and generalization bounds that decompose error sources across policy learning, preference modeling, and their interaction. 
-                    Our experiments on reasoning benchmarks demonstrate that WS-GRPO achieves competitive performance using only weak supervision, making group-relative policy optimization practical when detailed process supervision is limited.</p>
+                    Our experiments on reasoning benchmarks demonstrate that WS-GRPO achieves competitive performance using only weak supervision, making group-relative policy optimization practical when detailed process supervision is limited.
+                </p>
             </div>
 
             <div class="project-entry">
@@ -158,17 +161,35 @@
                 <div class="project-callout">
                     <p class="callout-authors">
                         Will Y. Zou, Jean Feng, Alexandre Kalimouttou, <strong>Jennifer Yuntong Zhang</strong>, Christopher W. Seymour, Romain Pirracchio<br>
+                        NeurIPS 2026 Workshop Learning from Time Series for Health.
                     </p>
                     <div class="project-actions">
                         <a href="https://openreview.net/pdf?id=TNj4Cv73Gh" class="btn_pdf">pdf</a>
                         <!-- <a href="https://github.com/JEN6YT/HCL" class="btn_code">code</a> -->
                     </div>
                 </div>
-                <p>Reinforcement learning (RL) applications in Clinical Decision Support Systems (CDSS) frequently encounter skepticism from practitioners regarding inoperable dosing decisions. We address this challenge with an end-to-end approach for learning optimal drug dosing and control policies for dual vasopressor administration in intensive care unit (ICU) patients with septic shock. 
+                <!-- <p>Reinforcement learning (RL) applications in Clinical Decision Support Systems (CDSS) frequently encounter skepticism from practitioners regarding inoperable dosing decisions. We address this challenge with an end-to-end approach for learning optimal drug dosing and control policies for dual vasopressor administration in intensive care unit (ICU) patients with septic shock. 
                     For realistic drug dosing, we apply action space design that accommodates discrete, continuous, and directional dosing strategies in a system that combines offline conservative Q-learning with a novel recurrent modeling in a replay buffer to capture temporal dependencies in ICU time-series data. 
                     Our comparative analysis of norepinephrine dosing strategies across different action space formulations reveals that the designed action spaces improve interpretability and facilitate clinical adoption while preserving efficacy. 
                     Empirical results on eICUand MIMIC demonstrate that action space design profoundly influences learned behavioral policies. The proposed methods achieve improved patient outcomes of over 15% in survival improvement probability, while aligning with established clinical protocols.
-                </p>
+                </p> -->
+            </div>
+            <div class="project-entry">
+                <h3>Methane Emission Drivers and Baseline Calculations</h3>
+                <div class="project-callout">
+                    <p class="callout-authors">
+                        <strong>Jennifer Yuntong Zhang</strong>, Behzad Azadie faraz, Luis A. Seco<br>
+                    </p>
+                    <div class="project-actions">
+                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5045567" class="btn_pdf">pdf</a>
+                        <a href="https://github.com/JEN6YT/Methane-Emission-Index" class="btn_code">code</a>
+                    </div>
+                </div>
+                <!-- <p>Reinforcement learning (RL) applications in Clinical Decision Support Systems (CDSS) frequently encounter skepticism from practitioners regarding inoperable dosing decisions. We address this challenge with an end-to-end approach for learning optimal drug dosing and control policies for dual vasopressor administration in intensive care unit (ICU) patients with septic shock. 
+                    For realistic drug dosing, we apply action space design that accommodates discrete, continuous, and directional dosing strategies in a system that combines offline conservative Q-learning with a novel recurrent modeling in a replay buffer to capture temporal dependencies in ICU time-series data. 
+                    Our comparative analysis of norepinephrine dosing strategies across different action space formulations reveals that the designed action spaces improve interpretability and facilitate clinical adoption while preserving efficacy. 
+                    Empirical results on eICUand MIMIC demonstrate that action space design profoundly influences learned behavioral policies. The proposed methods achieve improved patient outcomes of over 15% in survival improvement probability, while aligning with established clinical protocols.
+                </p> -->
             </div>
         </section>
 
