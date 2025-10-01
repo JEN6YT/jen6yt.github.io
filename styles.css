@@ -336,6 +336,7 @@ a:hover, a:focus, a:active {
 .project-actions a {
   display: inline-block;
   margin-right: 0.5rem;
+  margin-top: 0.5rem;
   padding: 0.25rem 0.75rem;
   font-size: 0.9rem;
   text-decoration: none;
