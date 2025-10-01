@@ -242,7 +242,8 @@ a:hover, a:focus, a:active {
 
 /* Collapsible abstract */
 .project-abstract {
-  margin-top: 0.1rem;
+  margin-top: 0rem;
+  margin-bottom: 0.5rem;
   border: 1px solid #e5e7eb; /* light gray */
   border-radius: 8px;
   background: var(--background-color, #fff);
