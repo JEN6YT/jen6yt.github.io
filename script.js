@@ -140,4 +140,12 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 });
-  
+
+document.addEventListener('click', (e) => {
+  if (!e.target.matches('.abstract-toggle')) return;
+  const details = e.target.closest('details.project-abstract');
+  const isOpening = !details.hasAttribute('open');
+  e.target.textContent = isOpening ? 'Hide' : 'Read more';
+  if (isOpening) details.removeAttribute('data-collapsed');
+  else details.setAttribute('data-collapsed','');
+});

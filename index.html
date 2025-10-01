@@ -36,7 +36,7 @@
                         My current research focuses on <b>Large Foundation Models Alignment</b>, <b>Reinforcement Learning</b>, and <b>Agent-Human Alignment</b> (multi-agent interactions and alignment).
                         I am deeply interested in using AI to solve real-world problems, and I am particularly fascinated by the potential of AI to enhance human capabilities, and for social good.
                     </p>
-                    <p>In my free time, I enjoy outdoor activities and exploring new technologies. If you would love to have a chat, feel free to shoot me an email! </p>
+                    <p>In my free time, I enjoy outdoor activities and sports. I love exploring new technologies: you can see my blog posts here. If you would love to have a chat, feel free to shoot me an email! </p>
                 </div>
                 <div class="about-image">
                     <img src="./assets/jennifer.jpg" alt="Jennifer Zhang" />
@@ -119,16 +119,22 @@
                         <a href="https://github.com/MAGICS-LAB/hallucination" class="btn_code">code</a>
                     </div> -->
                 </div>
-                <p>Group-Relative Policy Optimization (GRPO) has emerged as an effective approach for training language models on complex reasoning tasks by normalizing rewards within groups of rollouts. 
-                    However, GRPO's group-relative advantage estimation critically depends on dense step-wise reward signals throughout the reasoning process. 
-                    In practice, obtaining such dense supervision requires expensive human annotations of intermediate reasoning steps or carefully designed step-wise reward functions. 
-                    This creates a significant challenge specific to group-relative methods: while GRPO performs best with dense intermediate feedback, real-world scenarios often provide only sparse outcome supervision—such as final answer correctness or binary trajectory labels.
-                    We propose Weakly-Supervised Group-Relative Policy Optimization (WS-GRPO), which addresses this unique limitation by learning to extract dense preference signals from sparse outcome supervision while preserving GRPO's group-relative normalization benefits. 
-                    WS-GRPO operates in two phases: first, it trains a preference model to distinguish between successful and unsuccessful reasoning patterns using only trajectory-level outcomes; second, it leverages this learned preference model to provide step-wise weakly-supervised rewards that are combined with sparse terminal rewards during group-relative policy optimization. 
-                    By treating consecutive partial trajectories as preference pairs, our method generates dense feedback signals that complement GRPO's group normalization mechanism without requiring step-by-step human annotations.
-                    Theoretically, we provide comprehensive guarantees for WS-GRPO establishing preference model consistency under trajectory-level supervision, policy robustness to preference errors with controllable degradation rates, and generalization bounds that decompose error sources across policy learning, preference modeling, and their interaction. 
-                    Our experiments on reasoning benchmarks demonstrate that WS-GRPO achieves competitive performance using only weak supervision, making group-relative policy optimization practical when detailed process supervision is limited.
-                </p>
+                <details class="project-abstract" data-collapsed>
+                    <summary class="abstract-toggle">Read more</summary>
+                    <div class="abstract-box">
+                        <p>
+                        Group-Relative Policy Optimization (GRPO) has emerged as an effective approach for training language models on complex reasoning tasks by normalizing rewards within groups of rollouts. 
+                        However, GRPO's group-relative advantage estimation critically depends on dense step-wise reward signals throughout the reasoning process. 
+                        In practice, obtaining such dense supervision requires expensive human annotations of intermediate reasoning steps or carefully designed step-wise reward functions. 
+                        This creates a significant challenge specific to group-relative methods: while GRPO performs best with dense intermediate feedback, real-world scenarios often provide only sparse outcome supervision—such as final answer correctness or binary trajectory labels.
+                        We propose Weakly-Supervised Group-Relative Policy Optimization (WS-GRPO), which addresses this unique limitation by learning to extract dense preference signals from sparse outcome supervision while preserving GRPO's group-relative normalization benefits. 
+                        WS-GRPO operates in two phases: first, it trains a preference model to distinguish between successful and unsuccessful reasoning patterns using only trajectory-level outcomes; second, it leverages this learned preference model to provide step-wise weakly-supervised rewards that are combined with sparse terminal rewards during group-relative policy optimization. 
+                        By treating consecutive partial trajectories as preference pairs, our method generates dense feedback signals that complement GRPO's group normalization mechanism without requiring step-by-step human annotations.
+                        Theoretically, we provide comprehensive guarantees for WS-GRPO establishing preference model consistency under trajectory-level supervision, policy robustness to preference errors with controllable degradation rates, and generalization bounds that decompose error sources across policy learning, preference modeling, and their interaction. 
+                        Our experiments on reasoning benchmarks demonstrate that WS-GRPO achieves competitive performance using only weak supervision, making group-relative policy optimization practical when detailed process supervision is limited.
+                        </p>
+                    </div>
+                </details>
             </div>
 
             <div class="project-entry">
