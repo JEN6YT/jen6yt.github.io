@@ -312,8 +312,7 @@ a:hover, a:focus, a:active {
 .project-abstract[open] .abstract-box { max-height: none; }
 
 .project-callout {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem, 0.5rem, 0, 0.5rem;
   background-color: var(--background-color);
 }
 
@@ -324,7 +323,7 @@ a:hover, a:focus, a:active {
 }
 
 .callout-authors {
-  margin: 0.5rem 0 0.75rem;
+  margin: 0.5rem 0 0.6rem;
   color: var(--text-color);
 }
 
