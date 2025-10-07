@@ -143,8 +143,8 @@
                 <h3>SceneAlign: Aligning Multimodal Reasoning to Scene Graphs in Complex Visual Scenes @ McAuley Lab, UCSD</h3>
                 <div class="project-callout">
                     <p class="callout-authors">
-                        Chuhan Wang, <strong>Jennifer Yuntong Zhang</strong>, Junda Wu, Xintong Li, Tong Yu, Jingbo Shang, Julian McAuley<br>
-                        In submission to EACL 2026.
+                        Chuhan Wang, Xintong Li, <strong>Jennifer Yuntong Zhang</strong>, Junda Wu, Chengkai Huang, Lina Yao, Julian McAuley, Jingbo Shang<br>
+                        In submission to ARR 2025.
                     </p>
                     <!-- <div class="project-actions">
                         <a href="https://arxiv.org/pdf/2508.17550" class="btn_pdf">pdf</a>
@@ -154,11 +154,11 @@
                 <details class="project-abstract" data-collapsed>
                     <summary class="abstract-toggle">Read More</summary>
                     <div class="abstract-box">
-                        <p>Multimodal Large Language Models (MLLMs) often fail to reason faithfully in complex visual scenes, where multiple objects and intricate relations demand precise grounding of each reasoning step. Prior works improve reasoning via preference-based alignment using simple textual perturbations or answer-based edits, but they do not explicitly tackle grounding failures
-                            such as hallucinated entities, incorrect bindings, or omit steps. Motivated by the need for grounding-aware supervision, we propose SceneAlign, a scene-graph-guided preference alignment framework that explicitly supervises grounding during reasoning. 
-                            Scene graphs, which encode objects and relations as structured graphs, allow us to (1) identify reasoning-critical nodes and (2) perturb them using four targeted strategies—swap, replace, shorten, overthink—designed to simulate typical grounding errors including hallucination, mis-grounding, skipped inference, and over-specification. 
-                            These perturbed scene graphs and their corresponding rationales form ungrounded negative chains-of-thought (CoTs), which are filtered for fluency and paired with their grounded counterparts. 
-                            To ensure the model learns preferences for faithful structure-grounded reasoning, we apply Direct Preference Optimization (DPO) to align the model behavior toward coherence and accuracy.. Experiments across seven complex visual reasoning benchmarks show that ourmodel significantly improves both answer correctness and reasoning consistency, establishing a new paradigm for grounding-aware CoT supervision.
+                        <p>Multimodal large language models often struggle to reason faithfully in complex visual scenes, where multiple objects and relations require precise visual grounding at each reasoning step. 
+                            Prior works improve reasoning via preference-based alignment with textual perturbations or answer edits, which encourage coherent reasoning but fail to address answer-grounding inconsistency errors such as hallucinated entities, mis-grounded relations, skipped steps, and over-specified reasoning in complex scenes. 
+                            To address these limitations, we propose SceneAlign, a scene graph-guided preference alignment framework that enforces grounding consistency during reasoning alignment. Leveraging scene graphs as structured representations of objects and relations, SceneAlign identifies reasoning-critical nodes and perturbs them through four targeted strategies that mimic typical grounding failures.
+                            The resulting grounded and perturbed rationales provide contrastive pairs for Direct Preference Optimization (DPO), steering models toward structure-faithful reasoning. 
+                            Experiments across seven complex visual reasoning benchmarks show that SceneAlign consistently improves both answer accuracy and reasoning coherence, establishing a new paradigm for grounding-aware chain-of-thought supervision.
                         </p>
                     </div>
                 </details>
