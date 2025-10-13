@@ -226,7 +226,7 @@ a:hover, a:focus, a:active {
   color: var(--accent-color);
 }
 
-/* Projects Section - Mobile First */
+/* ── Publications / Projects (compact with separators) ───────────────────── */
 #projects {
   clear: both;
   margin-top: 2rem;
@@ -236,31 +236,85 @@ a:hover, a:focus, a:active {
   margin-right: auto;
 }
 
-.project-entry h3 {
-  margin-bottom: 0;
+/* Container for each publication */
+.project-entry {
+  padding: 0.75rem 0;
+  margin: 0;
+  border-top: 1px solid var(--border-color);  /* separator line */
 }
+.project-entry:first-child {
+  border-top: none;
+}
+
+/* Title: compact and readable */
+.project-entry h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+  line-height: 1.25;
+  color: #1e3a8a; /* subtle blue like example */
+}
+
+/* Callout block (authors/venue) tightened */
+.project-callout {
+  margin: 0.25rem 0 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+/* Authors / venue line */
+.callout-authors {
+  margin: 0.25rem 0 0.25rem;
+  color: var(--text-color);
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+/* Buttons row */
+.project-actions {
+  display: inline-flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-top: 0.35rem;
+}
+
+/* Small pill buttons: PDF / Code / Read More */
+.project-actions a {
+  display: inline-block;
+  margin: 0;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.82rem;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 9999px;
+  line-height: 1.4;
+  transition: opacity 0.2s ease;
+}
+.project-actions a:hover { opacity: 0.85; }
+
+.btn_pdf { background: #3b82f6; }  /* blue */
+.btn_code { background: #38bdf8; } /* cyan */
+.btn_read { background: #6b7280; } /* neutral for 'Read More' */
 
 /* Collapsible abstract */
 .project-abstract {
   display: block;
-  margin: 0 0 0.5rem;
+  margin: 0.4rem 0 0.35rem;
   border: 0;
   border-radius: 0;
   background: transparent;
   overflow: hidden;
-  display: block; /* helps in some browsers */
 }
 
 /* Button-like tab */
 .abstract-toggle {
-  display: inline-flex;   /* shrink to fit text + caret */
+  display: inline-flex;
   width: auto;
   align-items: center;
   gap: 0.4rem;
-  padding: 0;      /* vertical padding only */
+  padding: 0;
   font-weight: 600;
   background: transparent;
-  color: #ef6c00;         /* orange text */
+  color: var(--accent-color);
   border: none;
   cursor: pointer;
 }
@@ -283,16 +337,15 @@ a:hover, a:focus, a:active {
 /* body */
 .abstract-box {
   display: block;
-  width: 100%;                 /* full width of your text column */
+  width: 100%;
   margin-top: 0.4rem;
-  padding: 0.75rem;
+  padding: 0.6rem 0.65rem;          /* slimmer */
   border: 1px solid #e5e7eb;
   border-radius: 8px;
   background: var(--background-color, #fff);
   color: var(--text-color, #111);
   line-height: 1.6;
 }
-
 
 /* collapsed preview with gradient fade */
 .project-abstract[data-collapsed] .abstract-box {
@@ -310,44 +363,6 @@ a:hover, a:focus, a:active {
 
 /* when open, unclamp */
 .project-abstract[open] .abstract-box { max-height: none; }
-
-.project-callout {
-  margin: 0.5rem 0.5rem 0 0.5rem;
-  padding: 0.5rem;
-  background-color: var(--background-color);
-}
-
-.callout-title {
-  margin: 0 0 0.25rem;
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.callout-authors {
-  margin: 0.5rem 0 0.5rem;
-  color: var(--text-color);
-}
-
-.big-star {
-  font-size: 1.5em;
-  vertical-align: super;
-}
-
-.project-actions a {
-  display: inline-block;
-  margin-right: 0.5rem;
-  margin-top: 0.5rem;
-  padding: 0.25rem 0.75rem;
-  font-size: 0.9rem;
-  text-decoration: none;
-  color: #fff;
-  transition: opacity 0.2s;
-  margin-bottom: 0.5rem;
-}
-.btn_pdf { background: #3b82f6; }
-.btn_pdf:hover { opacity: 0.8; }
-.btn_code { background: #38bdf8; }
-.btn_code:hover { opacity: 0.8; }
 
 /* CV Section - Mobile First */
 #cv .cv-wrapper {
