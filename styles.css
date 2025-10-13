@@ -231,7 +231,7 @@ a:hover, a:focus, a:active {
   clear: both;
   margin-top: 2rem;
   padding: 1rem;
-  max-width: 90%;
+  max-width: min(50%, 62ch);
   margin-left: auto;
   margin-right: auto;
 }
@@ -554,11 +554,11 @@ footer {
     width: 180px;
   }
   
-  #experience, #projects {
-    padding: 2rem 6rem;
-    max-width: 60ch;
+  #projects {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: min(50%, 62ch);
   }
-  
   .experience-entry img {
     max-width: 180px;
   }
@@ -603,9 +603,10 @@ footer {
     bottom: 2rem;
     right: 2rem;
   }
-  
-  #experience, #projects {
-    padding: 2rem 8rem;
+  #projects {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: min(50%, 62ch);
   }
   
   .experience-entry {
@@ -704,9 +705,10 @@ footer {
     width: 220px;
   }
   
-  #experience, #projects {
-    padding: 2rem 10rem;
-    max-width: 1000px;
+  #projects {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: min(50%, 62ch);
   }
   
   .experience-entry {
