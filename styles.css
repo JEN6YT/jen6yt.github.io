@@ -231,7 +231,7 @@ a:hover, a:focus, a:active {
   clear: both;
   margin-top: 2rem;
   padding: 1rem;
-  max-width: min(50%, 62ch);
+  max-width: min(65%, 70ch);
   margin-left: auto;
   margin-right: auto;
 }
@@ -557,7 +557,7 @@ footer {
   #projects {
     padding-left: 1rem;
     padding-right: 1rem;
-    max-width: min(50%, 62ch);
+    max-width: min(65%, 70ch);
   }
   .experience-entry img {
     max-width: 180px;
@@ -606,7 +606,7 @@ footer {
   #projects {
     padding-left: 1rem;
     padding-right: 1rem;
-    max-width: min(50%, 62ch);
+    max-width: min(65%, 70ch);
   }
   
   .experience-entry {
@@ -708,7 +708,7 @@ footer {
   #projects {
     padding-left: 1rem;
     padding-right: 1rem;
-    max-width: min(50%, 62ch);
+    max-width: min(65%, 70ch);
   }
   
   .experience-entry {
