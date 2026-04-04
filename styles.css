@@ -202,7 +202,7 @@ a:hover, a:focus, a:active {
 .selected-work .project-entry {
   display: grid;
   grid-template-columns: 112px minmax(0, 1fr);
-  gap: 1rem;
+  gap: 1.25rem;
   padding: 0.75rem 0;
   margin: 0;
   border-top: 1px solid var(--border-color);
@@ -217,7 +217,8 @@ a:hover, a:focus, a:active {
   width: 100%;
   aspect-ratio: 4 / 3;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   border: 1px solid var(--border-color);
   border-radius: 10px;
   background: linear-gradient(135deg, rgba(239, 108, 0, 0.08), rgba(85, 146, 215, 0.08));
@@ -232,7 +233,8 @@ a:hover, a:focus, a:active {
   margin: 0 0 0.25rem;
   font-size: 1.05rem;
   line-height: 1.25;
-  color: #5592d7; /* subtle blue like example */
+  color: #1f2933;
+  font-weight: 600;
 }
 
 .project-entry h3 a {
