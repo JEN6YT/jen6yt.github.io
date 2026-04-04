@@ -135,7 +135,7 @@ a:hover, a:focus, a:active {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 50%;
+  width: min(100%, 1000px);
   margin: 0 auto;
   padding: 1rem;
 }
@@ -186,62 +186,24 @@ a:hover, a:focus, a:active {
   z-index: 9999;
 }
 
-/* Experience Section - Mobile First */
-#experience {
-  clear: both;
-  margin-top: 2rem;
-  padding: 1rem;
-  max-width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#experience h2 {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-}
-
-.experience-entry {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.experience-entry img {
+.selected-work {
   width: 100%;
-  max-width: 150px;
-  height: auto;
-  transition: filter 0.2s ease;
+  max-width: min(70ch, 100%);
 }
 
-.experience-text {
-  flex: 1;
-  min-width: 0;
-}
-
-.skills {
-  color: var(--accent-color);
+.selected-work h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.35rem;
+  color: var(--text-color);
 }
 
 /* ── Publications / Projects (compact with separators) ───────────────────── */
-#projects {
-  clear: both;
-  margin-top: 2rem;
-  padding: 1rem;
-  max-width: min(65%, 70ch);
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Container for each publication */
-.project-entry {
+.selected-work .project-entry {
   padding: 0.75rem 0;
   margin: 0;
-  border-top: 1px solid var(--border-color);  /* separator line */
+  border-top: 1px solid var(--border-color);
 }
+
 .project-entry:first-child {
   border-top: none;
 }
@@ -554,15 +516,6 @@ footer {
     width: 180px;
   }
   
-  #projects {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    max-width: min(65%, 70ch);
-  }
-  .experience-entry img {
-    max-width: 180px;
-  }
-  
   #cv .cv-wrapper {
     margin: 1.5rem 4rem;
   }
@@ -603,26 +556,6 @@ footer {
     bottom: 2rem;
     right: 2rem;
   }
-  #projects {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    max-width: min(65%, 70ch);
-  }
-  
-  .experience-entry {
-    flex-direction: row;
-    text-align: left;
-    gap: 2rem;
-  }
-  
-  .experience-entry img {
-    max-width: 200px;
-  }
-  
-  .experience-text {
-    margin-right: 0;
-  }
-  
   #cv .cv-wrapper {
     flex-direction: row;
     margin: 2rem 4rem;
@@ -703,16 +636,6 @@ footer {
   }
   #about .decorative-image {
     width: 220px;
-  }
-  
-  #projects {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    max-width: min(65%, 70ch);
-  }
-  
-  .experience-entry {
-    gap: 4rem;
   }
   
   #cv .cv-wrapper {

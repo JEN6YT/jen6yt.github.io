@@ -1,6 +1,7 @@
 // Finds every element with the data-link attribute, giving a list of the menu links.
 const links = document.querySelectorAll('a[data-link]');
 const sections = document.querySelectorAll('main > section');
+const defaultPage = 'about';
 
 function update_year(){
     document.getElementById("year").innerHTML = new Date().getFullYear();
@@ -10,10 +11,11 @@ function update_year(){
 update_year();
 
 function loadPage(id){
+    const targetId = Array.from(sections).some(section => section.id === id) ? id : defaultPage;
     // Loop through each section
     sections.forEach(section => {
         // If the id of the section matches the id passed to the function
-        if(section.id === id){
+        if(section.id === targetId){
             // Show the section
             section.style.display = 'block';
         } else {
@@ -24,7 +26,7 @@ function loadPage(id){
     // Loop through each link
     links.forEach(link => {
         // If the href of the link matches the id passed to the function
-        if(link.getAttribute('href').substring(1) === id){
+        if(link.getAttribute('href').substring(1) === targetId){
             // Add the active class to the link
             link.classList.add('active');
         } else {
@@ -32,7 +34,7 @@ function loadPage(id){
             link.classList.remove('active');
         }
     });
-    document.title = `Jennifer Zhang · ${id.charAt(0).toUpperCase()+id.slice(1)}`;
+    document.title = `Jennifer Zhang · ${targetId.charAt(0).toUpperCase()+targetId.slice(1)}`;
 }
 
 // For each link, add an event listener to it.
@@ -50,12 +52,12 @@ links.forEach(link => {
 });
 
 // Load the initial page based on the URL hash
-const initialPage = location.hash.replace('#', '') || 'about';
+const initialPage = location.hash.replace('#', '') || defaultPage;
 loadPage(initialPage);
 
 // Handle the back and forward buttons
 window.addEventListener('popstate', function() {
-    const hash = location.hash.replace('#', '') || 'about';
+    const hash = location.hash.replace('#', '') || defaultPage;
     loadPage(hash);
 }
 );
