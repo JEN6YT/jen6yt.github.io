@@ -61,7 +61,7 @@
                 <h2>Selected Work</h2>
 
                 <div class="project-entry">
-                    <div class="project-thumb" aria-hidden="true">Image</div>
+                    <img class="project-thumb" src="assets/icl.png" alt="" />
                     <div class="project-body">
                         <h3><a href="https://arxiv.org/abs/2508.17550">In-Context Algorithm Emulation in Fixed-Weight Transformers</a></h3>
                         <div class="project-callout">
@@ -70,16 +70,12 @@
                                 ICLR 2026.
                                 <sup class="big-star">*</sup> Equal contribution.
                             </p>
-                            <div class="project-actions">
-                                <a href="https://arxiv.org/abs/2508.17550" class="btn_pdf">pdf</a>
-                                <a href="https://github.com/MAGICS-LAB/algo_emu" class="btn_code">code</a>
-                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-entry">
-                    <div class="project-thumb" aria-hidden="true">Image</div>
+                    <img class="project-thumb" src="assets/hallu.png" alt="" />
                     <div class="project-body">
                         <h3><a href="https://www.arxiv.org/abs/2509.21473">Are Hallucinations Bad Estimations?</a></h3>
                         <div class="project-callout">
@@ -87,77 +83,51 @@
                                 Hude Liu<sup class="big-star">*</sup>, J. Y.-C. Hu<sup class="big-star">*</sup>, <strong>J. Y. Zhang</strong>, Z. Song, Han Liu<br>
                                 Preprint.
                             </p>
-                            <div class="project-actions">
-                                <a href="https://www.arxiv.org/abs/2509.21473" class="btn_pdf">pdf</a>
-                                <a href="https://github.com/MAGICS-LAB/hallucination" class="btn_code">code</a>
-                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-entry">
-                    <div class="project-thumb" aria-hidden="true">Image</div>
+                    <img class="project-thumb" src="assets/cell-jepa.png" alt="" />
                     <div class="project-body">
-                        <h3><a href="https://arxiv.org/pdf/2602.02093">Cell-JEPA: Latent Representation Learning for Single-Cell Transcriptomics</a></h3>
+                        <h3><a href="https://arxiv.org/abs/2602.02093">Cell-JEPA: Latent Representation Learning for Single-Cell Transcriptomics</a></h3>
                         <div class="project-callout">
                             <p class="callout-authors">
                                 A. Elsheikh<sup class="big-star">*</sup>, R.-X. Wang<sup class="big-star">*</sup>, W. Wu<sup class="big-star">*</sup>, Y. Wen, P. Dibaeinia, <strong>J. Y. Zhang</strong>, J. Y.-C. Hu, M. Knudson, S. Badu, S.-H. Sun, A. A. Khan, H. Liu. <br>
-                                In submission to ICML 2026.
+                                Preprint.
                             </p>
-                            <div class="project-actions">
-                                <a href="https://arxiv.org/pdf/2602.02093" class="btn_pdf">pdf</a>
-                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-entry">
-                    <div class="project-thumb" aria-hidden="true">Image</div>
+                    <img class="project-thumb" src="assets/ws-grpo.png" alt="" />
                     <div class="project-body">
-                        <h3>WS-GRPO: Weakly-Supervised Group-Relative Policy Optimization</h3>
+                        <h3><a href="https://arxiv.org/abs/2602.17025">WS-GRPO: Weakly-Supervised Group-Relative Policy Optimization</a></h3>
                         <div class="project-callout">
                             <p class="callout-authors">
                                 G. Mundada, R. Surana, <strong>J. Y. Zhang</strong>, X. Li, T. Yu, L. Yao, J. Shang, J. McAuley, J. Wu<br>
-                                In submission to ICML 2026.
+                                Preprint.
                             </p>
                         </div>
-                        <details class="project-abstract" data-collapsed>
-                            <summary class="abstract-toggle">Read More</summary>
-                            <div class="abstract-box">
-                                <p>
-                                Group-Relative Policy Optimization (GRPO) has emerged as an effective approach for training language models on complex reasoning tasks by normalizing rewards within groups of rollouts.
-                                However, GRPO's group-relative advantage estimation critically depends on dense step-wise reward signals throughout the reasoning process.
-                                In practice, obtaining such dense supervision requires expensive human annotations of intermediate reasoning steps or carefully designed step-wise reward functions.
-                                This creates a significant challenge specific to group-relative methods: while GRPO performs best with dense intermediate feedback, real-world scenarios often provide only sparse outcome supervision, such as final answer correctness or binary trajectory labels.
-                                We propose Weakly-Supervised Group-Relative Policy Optimization (WS-GRPO), which addresses this unique limitation by learning to extract dense preference signals from sparse outcome supervision while preserving GRPO's group-relative normalization benefits.
-                                WS-GRPO operates in two phases: first, it trains a preference model to distinguish between successful and unsuccessful reasoning patterns using only trajectory-level outcomes; second, it leverages this learned preference model to provide step-wise weakly-supervised rewards that are combined with sparse terminal rewards during group-relative policy optimization.
-                                By treating consecutive partial trajectories as preference pairs, our method generates dense feedback signals that complement GRPO's group normalization mechanism without requiring step-by-step human annotations.
-                                Theoretically, we provide comprehensive guarantees for WS-GRPO establishing preference model consistency under trajectory-level supervision, policy robustness to preference errors with controllable degradation rates, and generalization bounds that decompose error sources across policy learning, preference modeling, and their interaction.
-                                Our experiments on reasoning benchmarks demonstrate that WS-GRPO achieves competitive performance using only weak supervision, making group-relative policy optimization practical when detailed process supervision is limited.
-                                </p>
-                            </div>
-                        </details>
                     </div>
                 </div>
 
                 <div class="project-entry">
-                    <div class="project-thumb" aria-hidden="true">Image</div>
+                    <img class="project-thumb" src="assets/scenealign.png" alt="" />
                     <div class="project-body">
-                        <h3><a href="https://arxiv.org/pdf/2601.05600">SceneAlign: Aligning Multimodal Reasoning to Scene Graphs in Complex Visual Scenes</a></h3>
+                        <h3><a href="https://arxiv.org/abs/2601.05600">SceneAlign: Aligning Multimodal Reasoning to Scene Graphs in Complex Visual Scenes</a></h3>
                         <div class="project-callout">
                             <p class="callout-authors">
                                 C. Wang<sup class="big-star">*</sup>, X. Li<sup class="big-star">*</sup>, <strong>J. Y. Zhang</strong>, J. Wu, C. Huang, L. Yao, J. McAuley, J. Shang<br>
-                                In submission to ACL 2026.
+                                ACL 2026.
                             </p>
-                            <div class="project-actions">
-                                <a href="https://arxiv.org/pdf/2601.05600" class="btn_pdf">pdf</a>
-                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-entry">
-                    <div class="project-thumb" aria-hidden="true">Image</div>
+                <!-- <div class="project-entry">
+                    <img class="project-thumb" src="assets/project-placeholder.svg" alt="" />
                     <div class="project-body">
                         <h3>From Verifiable Rewards to Policy Learning: A Survey of Reinforcement Learning from Verifiable Rewards</h3>
                         <div class="project-callout">
@@ -177,56 +147,8 @@
                             </div>
                         </details>
                     </div>
-                </div>
-
-                <div class="project-entry">
-                    <div class="project-thumb" aria-hidden="true">Image</div>
-                    <div class="project-body">
-                        <h3><a href="https://arxiv.org/abs/2510.01508">Realistic CDSS Drug Dosing with End-to-end Recurrent Q-learning for Dual Vasopressor Control</a></h3>
-                        <div class="project-callout">
-                            <p class="callout-authors">
-                                W. Y. Zou, J. Feng, A. Kalimouttou, <strong>J. Y. Zhang</strong>, C. W. Seymour, R. Pirracchio<br>
-                                NeurIPS 2025 Workshop Learning from Time Series for Health.
-                            </p>
-                            <div class="project-actions">
-                                <a href="https://arxiv.org/abs/2510.01508" class="btn_pdf">pdf</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-entry">
-                    <div class="project-thumb" aria-hidden="true">Image</div>
-                    <div class="project-body">
-                        <h3><a href="https://www.sciencedirect.com/science/article/pii/S2153353925001233?via%3Dihub">ADPv2: A Hierarchical Histological Tissue Type-Annotated Dataset for Potential Biomarker Discovery of Colorectal Disease</a></h3>
-                        <div class="project-callout">
-                            <p class="callout-authors">
-                                Z. Yang, K. Li, S. G. Ramandi, P. Brassard, H. Khellaf, V. Q-H. Trinh, <strong>J. Y. Zhang</strong>, L. Chen, C. Rowsell, S. Varma, K. Plantaniotis, M. S. Hosseini<br>
-                                Journal of Pathology Informatics.
-                            </p>
-                            <div class="project-actions">
-                                <a href="https://www.sciencedirect.com/science/article/pii/S2153353925001233?via%3Dihub" class="btn_pdf">pdf</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-entry">
-                    <div class="project-thumb" aria-hidden="true">Image</div>
-                    <div class="project-body">
-                        <h3><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5045567">Methane Emission Drivers and Baseline Calculations</a></h3>
-                        <div class="project-callout">
-                            <p class="callout-authors">
-                                <strong>J. Y. Zhang</strong>, B. A. faraz, L. A. Seco<br>
-                                Preprint.
-                            </p>
-                            <div class="project-actions">
-                                <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5045567" class="btn_pdf">pdf</a>
-                                <a href="https://github.com/JEN6YT/Methane-Emission-Index" class="btn_code">code</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div> -->
+                
             </div>
             <img src="assets/sunflower.png" alt="Sunflower" class="decorative-image" />
         </section>

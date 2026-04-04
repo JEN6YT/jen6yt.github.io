@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-labelledby="title desc">
+  <title id="title">Project placeholder</title>
+  <desc id="desc">A neutral placeholder image for a project entry.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f7ede2" />
+      <stop offset="100%" stop-color="#dceaf7" />
+    </linearGradient>
+  </defs>
+  <rect width="480" height="360" rx="24" fill="url(#bg)" />
+  <rect x="48" y="48" width="384" height="264" rx="18" fill="none" stroke="#c9d2dc" stroke-width="4" stroke-dasharray="10 10" />
+  <circle cx="150" cy="138" r="28" fill="#ef6c00" opacity="0.8" />
+  <path d="M102 248l72-72 48 52 62-76 94 96H102z" fill="#5592d7" opacity="0.75" />
+  <text x="240" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" letter-spacing="2" fill="#5b6773">
+    PROJECT IMAGE
+  </text>
+</svg>
